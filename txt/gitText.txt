@@ -13,3 +13,9 @@ $ git config --global core.autocrlf false  //禁用自动转换
 然后重新执行：
 $ git init    
 $ git add .  
+
+! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'git@github.com:yangchao0718/cocos2d.git
+这个问题主要是出在本地没有README.md文档的备份，只要先使用
+git pull --rebase origin master 进行文档合并，
+再执行语句 git push -u origin master即可完成代码上传到github
