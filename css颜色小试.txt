@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>试试颜色</title>
+	<style>
+	div.news3{
+		display:none;
+	}
+	div.news2{
+		display: none;
+	}
+	div.news1{
+		display: none;
+	}
+	</style>
+</head>
+<body>
+  <div class="news1" style="background-color: #000;">000</div>
+  <div class="news1 news2 news3" style="background-color: #001;">001</div>
+  <div class="news1 news2 news3" style="background-color: #002;">002</div>
+  <div class="news1 news2 news3" style="background-color: #003;">003</div>
+  <div class="news1 news2" style="background-color: #004;">004</div>
+  <div class="news1 news2 news3" style="background-color: #005;">005</div>
+  <div class="news1 news2 news3" style="background-color: #006;">006</div>
+  <div class="news1 news2 news3" style="background-color: #007;">007</div>
+  <div class="news1 news2" style="background-color: #008;">008</div>
+  <div class="news1 news2 news3" style="background-color: #009;">009</div>
+  <div class="news1 news2 news3" style="background-color: #00A;">00A</div>
+  <div class="news1 news2 news3" style="background-color: #00B;">00B</div>
+  <div class="news1 news2" style="background-color: #00C;">00C</div>
+  <div class="news1 news2 news3" style="background-color: #00D;">00D</div>
+  <div class="news1 news2 news3" style="background-color: #00E;">00E</div>
+
+  <div class="news1" style="background-color: #00F;">00F</div>
+  <div class="news1 news2 news3" style="background-color: #01F;">01F</div>
+  <div class="news1 news2 news3" style="background-color: #02F;">02F</div>
+  <div class="news1 news2 news3" style="background-color: #03F;">03F</div>
+  <div class="news1 news2" style="background-color: #04F;">04F</div>
+  <div class="news1 news2 news3" style="background-color: #05F;">05F</div>
+  <div class="news1 news2 news3" style="background-color: #06F;">06F</div>
+  <div class="news1 news2 news3" style="background-color: #07F;">07F</div>
+  <div class="news1 news2" style="background-color: #08F;">08F</div>
+  <div class="news1 news2 news3" style="background-color: #09F;">09F</div>
+  <div class="news1 news2 news3" style="background-color: #0AF;">0AF</div>
+  <div class="news1 news2 news3" style="background-color: #0BF;">0BF</div>
+  <div class="news1 news2" style="background-color: #0CF;">0CF</div>
+  <div class="news1 news2 news3" style="background-color: #0DF;">0DF</div>
+  <div class="news1 news2 news3" style="background-color: #0EF;">0EF</div>
+
+  <div class="news1" style="background-color: #0F0;">0F0</div>
+  <div class="news1 news2 news3" style="background-color: #0F1;">0F1</div>
+  <div class="news1 news2 news3" style="background-color: #0F2;">0F2</div>
+  <div class="news1 news2 news3" style="background-color: #0F3;">0F3</div>
+  <div class="news1 news2" style="background-color: #0F4;">0F4</div>
+  <div class="news1 news2 news3" style="background-color: #0F5;">0F5</div>
+  <div class="news1 news2 news3" style="background-color: #0F6;">0F6</div>
+  <div class="news1 news2 news3" style="background-color: #0F7;">0F7</div>
+  <div class="news1 news2" style="background-color: #0F8;">0F8</div>
+  <div class="news1 news2 news3" style="background-color: #0F9;">0F9</div>
+  <div class="news1 news2 news3" style="background-color: #0FA;">0FA</div>
+  <div class="news1 news2 news3" style="background-color: #0FB;">0FB</div>
+  <div class="news1 news2" style="background-color: #0FC;">0FC</div>
+  <div class="news1 news2 news3" style="background-color: #0FD;">0FD</div>
+  <div class="news1 news2 news3" style="background-color: #0FE;">0FE</div>
+
+  <div class="news1" style="background-color: #0FF;">0FF</div>
+  <div class="news1 news2 news3" style="background-color: #1FF;">1FF</div>
+  <div class="news1 news2 news3" style="background-color: #2FF;">2FF</div>
+  <div class="news1 news2 news3" style="background-color: #3FF;">3FF</div>
+  <div class="news1 news2" style="background-color: #4FF;">4FF</div>
+  <div class="news1 news2 news3" style="background-color: #5FF;">5FF</div>
+  <div class="news1 news2 news3" style="background-color: #6FF;">6FF</div>
+  <div class="news1 news2 news3" style="background-color: #7FF;">7FF</div>
+  <div class="news1 news2" style="background-color: #8FF;">8FF</div>
+  <div class="news1 news2 news3" style="background-color: #9FF;">9FF</div>
+  <div class="news1 news2 news3" style="background-color: #AFF;">AFF</div>
+  <div class="news1 news2 news3" style="background-color: #BFF;">BFF</div>
+  <div class="news1 news2" style="background-color: #CFF;">CFF</div>
+  <div class="news1 news2 news3" style="background-color: #DFF;">DFF</div>
+  <div class="news1 news2 news3" style="background-color: #EFF;">EFF</div>
+
+  <div class="news1" style="background-color: #F00;">F00</div>
+  <div class="news1 news2 news3" style="background-color: #F01;">F01</div>
+  <div class="news1 news2 news3" style="background-color: #F02;">F02</div>
+  <div class="news1 news2 news3" style="background-color: #F03;">F03</div>
+  <div class="news1 news2" style="background-color: #F04;">F04</div>
+  <div class="news1 news2 news3" style="background-color: #F05;">F05</div>
+  <div class="news1 news2 news3" style="background-color: #F06;">F06</div>
+  <div class="news1 news2 news3" style="background-color: #F07;">F07</div>
+  <div class="news1 news2" style="background-color: #F08;">F08</div>
+  <div class="news1 news2 news3" style="background-color: #F09;">F09</div>
+  <div class="news1 news2 news3" style="background-color: #F0A;">F0A</div>
+  <div class="news1 news2 news3" style="background-color: #F0B;">F0B</div>
+  <div class="news1 news2" style="background-color: #F0C;">F0C</div>
+  <div class="news1 news2 news3" style="background-color: #F0D;">F0D</div>
+  <div class="news1 news2 news3" style="background-color: #F0E;">F0E</div>
+
+  <div class="news1" style="background-color: #F0F;">F0F</div>
+  <div class="news1 news2 news3" style="background-color: #F1F;">F1F</div>
+  <div class="news1 news2 news3" style="background-color: #F2F;">F2F</div>
+  <div class="news1 news2 news3" style="background-color: #F3F;">F3F</div>
+  <div class="news1 news2" style="background-color: #F4F;">F4F</div>
+  <div class="news1 news2 news3" style="background-color: #F5F;">F5F</div>
+  <div class="news1 news2 news3" style="background-color: #F6F;">F6F</div>
+  <div class="news1 news2 news3" style="background-color: #F7F;">F7F</div>
+  <div class="news1 news2" style="background-color: #F8F;">F8F</div>
+  <div class="news1 news2 news3" style="background-color: #F9F;">F9F</div>
+  <div class="news1 news2 news3" style="background-color: #FAF;">FAF</div>
+  <div class="news1 news2 news3" style="background-color: #FBF;">FBF</div>
+  <div class="news1 news2" style="background-color: #FCF;">FCF</div>
+  <div class="news1 news2 news3" style="background-color: #FDF;">FDF</div>
+  <div class="news1 news2 news3" style="background-color: #FEF;">FEF</div>
+
+  <div class="news1" style="background-color: #FF0;">FF0</div>
+  <div class="news1 news2 news3" style="background-color: #FF1;">FF1</div>
+  <div class="news1 news2 news3" style="background-color: #FF2;">FF2</div>
+  <div class="news1 news2 news3" style="background-color: #FF3;">FF3</div>
+  <div class="news1 news2" style="background-color: #FF4;">FF4</div>
+  <div class="news1 news2 news3" style="background-color: #FF5;">FF5</div>
+  <div class="news1 news2 news3" style="background-color: #FF6;">FF6</div>
+  <div class="news1 news2 news3" style="background-color: #FF7;">FF7</div>
+  <div class="news1 news2" style="background-color: #FF8;">FF8</div>
+  <div class="news1 news2 news3" style="background-color: #FF9;">FF9</div>
+  <div class="news1 news2 news3" style="background-color: #FFA;">FFA</div>
+  <div class="news1 news2 news3" style="background-color: #FFB;">FFB</div>
+  <div class="news1 news2" style="background-color: #FFC;">FFC</div>
+  <div class="news1 news2 news3" style="background-color: #FFD;">FFD</div>
+  <div class="news1 news2 news3" style="background-color: #FFE;">FFE</div>
+
+  <div class="news1 news2 news3" style="background-color: #FFF;">FFF</div>
+
+
+  <div>
+    <p>突然觉得颜色也很重要...所以决定无聊的时候测试一下颜色（当然我还有很多事情要去学去做..）首先呢测试的是
+    <ul>
+      <li>#FFF，这是个纯白的颜色，毫无疑问，#000是纯黑。即从0~F颜色由深至浅</li>
+      <li>其中红绿蓝三种颜色都由两种数字构成
+        <ul>
+          <li>红色由第两和第三数字构成，#F00是最红的红色，#F11比#F22红，最淡的红色是#FFFEFE（肉眼不可见）。</li>
+          <li>绿色由第一位和第三位构成</li>
+          <li>蓝色由第一位和第二位构成</li>
+          <li>当然#E00和#A00或者#100都是红色，但是已经红（绿、蓝）得发黑了，#000是黑色</li>
+          <li>紫色是由红色加蓝色构成，所以可以#F00 + #00F得到紫色，同时想让它更绿一点的话，加上#0F0（即让第一位和第三位的数值缩小）</li>
+        </ul>
+      </li>
+      <li>
+        <div class="news" style="background-color: #800;">00F</div>
+        <div class="news" style="background-color: #F00;">00F</div>
+        <div class="news" style="background-color: #FF0;">00F</div>
+        <div class="news" style="background-color: #F0F;">00F</div>
+        <div class="news" style="background-color: #0FF;">00F</div>
+      </li>
+      <li>
+        <ul>上面都是纯扯淡啊啊啊！经过一下午的实验，我终于找到了一定的规律！
+          <li>首先确定几个基本颜色：#FFF白色、#FF0黄色、#F00红色、#0F0绿色、#00F蓝色、#F0F紫色、#000黑色</li>
+          <li>看第一位：当第一位是 F 时，颜色将是红黄色调
+            <ul>
+              <li>当第二位是 F 时，一定是黄色调（#FF0），第三位越接近 F 颜色越淡，直到白色（#FFF）</li>
+              <li>否则就是红色调
+                <ul>
+                  <li>第二位越接近 F 颜色越黄（#FF0），橙色是介于红黄之间的颜色（#F80），其中第三位越接近 F 颜色越淡，直到白色（#FFF）</li>
+                  <li>第三位越接近 F 颜色越蓝（#00F），紫色是红蓝混合的颜色（#F0F），其中第二位越接近 F 颜色越淡，直到白色（#FFF）</li>
+                  <li>当第二位和第三位相同时，表示红色的深浅，由最红直到白色（#F00、#F44、#F88、#FCC、#FFF）</li>
+                  <li>当第二位第三位不同时(指非 0 / F），观看两者的中的较大者，第二位大则偏黄（橙），第三位大则偏蓝（紫），两者一样大时仅表达红色深浅</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>否则将是蓝绿色调
+            <ul>
+              <li>当第二位是 F 时，一定是绿色调（#0F0）
+                <ul>
+                  <li>当第一位与第三位相同时，表示绿色的深浅，由最绿直到白色（#0F0、#4F4、#8F8、#CFC、#FFF）</li>
+                  <li>当第一位第三位不同时(指非 0 / F），观看两者的中的较大者，第一位大则偏黄（#FF0），第三位大则偏淡蓝（#0FF），靛青色（#088），两者一样大时仅表达绿色深浅</li>
+                </ul>
+              </li>
+              <li>当第三位是 F 时，一定是蓝色调（#00F）
+                <ul>
+                  <li>当第一位与第二位相同时，表示蓝色的深浅，由最蓝直到白色（#00F、#44F、#88F、#CCF、#FFF）</li>
+                  <li>当第一位第二位不同时(指非 0 / F），观看两者的中的较大者，第一位大则偏紫（#F0F），第二大则偏淡蓝（#0FF），两者一样大时仅表达蓝色深浅</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>当颜色中没有 F 时
+            <ul>
+              <li>观看三个数之间的差值，如果差值较小则为灰色（#888）</li>
+              <li>灰色介于白色（#FFF）与黑色（#000）之间，同样相同的三个数字只是代表颜色的灰度（#FFF、#CCC、#888、#444、#000）</li>
+              <li>如果三个数差值较大，看哪个数比较大，红色系（#hll），黄色系（#hhl），绿色系（#lhl），蓝色系（#llh），青色系（#lhh），紫色系（#hlh）。（h表示high，l表示low）</li>
+            </ul>
+          </li>
+          <li>谨记越小的数越黑，因为黑色是（#000）。接下来总结一下大致的色系：</li>
+          <li>黑（#000）、白（#FFF）、灰（#888）、蓝（#00F）、绿（#0F0）、棕（#800）、红（#F00）、黄（#FF0）、橙（#F80）、紫（#F0F）、淡蓝（#0FF）、靛青（#808）</li>
+        </ul>
+      </li>
+    </ul>
+    还有一件事！我发现在style中调节属性只能用冒号！不能用等号，不知道等号是在哪里用的...style{width:"200px";}
+    </p>
+  </div>
+</body>
+</html>

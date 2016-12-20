@@ -1,0 +1,313 @@
+<!-- 
+论一个好看的网页！！
+这个网页是用bootstrap写的。。
+http://www.aseoe.com/special/webstart/normpage/html.html
+ -->
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML编码规范</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--[if lt IE 9]> 
+    <style>
+    .sidebar{ display:none;}
+    </style>
+    <![endif]-->
+  </head>
+  <body data-spy="scroll" data-target=".sidebar">
+    <!-- banner -->
+    <div class="container-fluid" id="#top">
+      <div class="row">
+        <div class="col-md-12 banner-full" style="background:url(images/banner.jpg) no-repeat center center;">
+          <h1>HTML编码规范</h1>
+        </div>
+      </div>
+    </div>
+    <!-- /banner -->
+    <!-- tab nav -->
+    <div class="container">
+      <div class="row top-tab-nav">
+        <ul class="nav nav-pills nav-justified" role="tablist">
+          <li role="presentation" class="active"><a href="html.html">HTML编码规范</a></li>
+          <li role="presentation"><a href="css.html">CSS编码规范</a></li>
+          <li role="presentation"><a href="js.html">Javascript编码规范</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- tab nav -->
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-md-9">
+          <div class="docs-section">
+            <h2 id="typographyRules">排版规则</h2>
+            <h3 id="indent">缩进</h3>
+            <p>使用2个空格缩进</p>
+<pre class="bg-success">&lt;ul&gt;
+  &lt;li&gt;Fantastic&lt;/li&gt;
+  &lt;li&gt;Great&lt;/li&gt;
+&lt;/ul&gt;</pre>
+<pre class="bg-success">.example {
+  color: blue;
+}</pre>
+            <h3 id="spell">大小写</h3>
+            <p>只允许使用小写。</p>
+            <p>所有的代码都用小写字母：适用于元素名，属性，属性值（除了文本和<code>CDATA</code>）， 选择器，特性，特性值（除了字符串）。</p>
+<pre class="bg-danger">&lt;!-- 不推荐 --&gt;
+&lt;A HREF="/"&gt;Home&lt;/A&gt;</pre>
+<pre class="bg-success">&lt;!-- 推荐 --&gt;
+&lt;img src="google.png" alt="Google"&gt;</pre>            
+            <h3 id="space">行尾空格</h3>
+            <p>建议删除行尾白空格。</p>
+<pre class="bg-danger">&lt;!-- 不推荐 --&gt;
+&lt;p&gt;What?  &lt;/p&gt;</pre>
+<pre class="bg-success">&lt;!-- 推荐 --&gt;
+&lt;p&gt;Yes please.&lt;/p&gt;</pre>
+          </div>
+          <div class="docs-section">
+            <h2 id="metaRules">常规Meta规则</h2>
+            <h3 id="encode">编码</h3>
+            <p>如果没有特殊需求，一般采用<code>utf-8</code>编码。如果是cms站点，则遵守该站点的编码规则。</p>
+<pre class="bg-success">&lt;!-- 网页编码 --&gt;
+&lt;meta charset="utf-8"&gt;</pre>            
+            <h3 id="notes">注释</h3>
+            <p>尽可能的去解释你写的代码。说明该代码包括什么、目的是什么、能做什么、为什么使用它等。</p>
+            <p>注释是否需要详尽，取决于项目的复杂程度。</p>
+            <strong>一般单行注释：</strong>
+<pre class="bg-success">&lt;!-- col --&gt;</pre>
+            <strong>模块间注释：</strong>
+<pre class="bg-success">&lt;!-- news --&gt;
+&lt;div class="news"&gt;
+  &lt;h2&gt;News&lt;/h2&gt;
+  &lt;p&gt;...&lt;/p&gt;
+&lt;/div&gt;
+&lt;!--/ news --&gt;</pre>
+            <strong>循环注释：</strong>
+<pre class="bg-success">&lt;ul&gt;
+  &lt;!-- loop: new list --&gt;
+  &lt;li&gt;new's title 1&lt;/li&gt;
+  &lt;li&gt;new's title 2&lt;/li&gt;
+  &lt;li&gt;new's title 3&lt;/li&gt;
+  &lt;li&gt;new's title 4&lt;/li&gt;
+  &lt;li&gt;new's title 5&lt;/li&gt;
+  &lt;!-- /loop: new list --&gt;
+&lt;/ul&gt;</pre>
+            <strong>cms输出注释：</strong>
+<pre class="bg-success">&lt;!-- cms: news list --&gt;
+&lt;ul&gt;
+  &lt;li&gt;new's title 1&lt;/li&gt;
+  &lt;li&gt;new's title 2&lt;/li&gt;
+  &lt;li&gt;new's title 3&lt;/li&gt;
+  &lt;li&gt;new's title 4&lt;/li&gt;
+  &lt;li&gt;new's title 5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- /cms: news list --&gt;</pre>
+            <strong>Tab选项卡内容注释：</strong>
+<pre class="bg-success">&lt;!-- tab: news list --&gt;
+&lt;div class="tab"&gt;&lt;/div&gt;
+&lt;!-- /tab: news list --&gt;</pre>
+          </div>
+          <div class="docs-section">
+            <h2 id="routineHtmlRules">常规HTML设计规则</h2>
+            <h3 id="docType">文档类型</h3>
+            <p>使用html5文档声明，不再使用XHTML（<code>application/xhtml+xml</code>）。</p>
+            <p>HTML5是目前所有HTML文档类型中的首选：</p>
+<pre class="bg-success">&lt;!DOCTYPE html&gt;</pre>            
+            <h3 id="htmlValidity">HTML 的正确性</h3>
+            <p>编写有效、正确的HTML代码，否则很难达到性能上的提升。</p>
+            <p>可以使用一些工具验证你的代码，如 <a href="http://validator.w3.org/" title="" target="_blank">W3C HTML validator</a></p>
+            <h3 id="semanticHtml">HTML 的语义性</h3>
+            <p>根据HTML各个元素的用途而去使用它们。</p>
+<pre class="bg-danger">&lt;!-- 不推荐 --&gt;
+&lt;div class="col"&gt;
+  &lt;div class="title"&gt;news&lt;/div&gt;
+  &lt;p&gt;list1&lt;/p&gt;
+  &lt;p&gt;list2&lt;/p&gt;
+  &lt;p&gt;list3&lt;/p&gt;
+&lt;/div&gt;</pre>
+<pre class="bg-success">&lt;!-- 推荐 --&gt;
+&lt;div class="col"&gt;
+  &lt;h2 class="title"&gt;news&lt;/h2&gt;
+  &lt;p&gt;list1&lt;/p&gt;
+  &lt;p&gt;list2&lt;/p&gt;
+  &lt;p&gt;list3&lt;/p&gt;
+&lt;/div&gt;</pre>
+            <strong>部分标签说明：</strong>
+            <ul>
+              <li><code>div</code> 主要用于布局，分割页面的结构;</li>
+              <li><code>ul</code>/<code>ol</code> 主要用于无序/有序列表;</li>
+              <li><code>dl</code>/<code>dt</code>/<code>dd</code> 当页面中出现第一行为类似标题/简述，然后下面为详细描述的内容时应该使用该标签;</li>
+              <li><code>span</code> 没有特殊的意义，可以用作排版的辅助，然后在css中定义<code>span</code>;</li>
+              <li><code>h1</code>-<code>h6</code> 标题, 根据重要性依次递减;</li>
+              <li><code>h1</code> 最重要的标题;</li>
+              <li><code>label</code> 使表单更有亲和力而且能辅助表单排版;</li>
+            </ul>
+            <strong>不推荐使用的标签：</strong>
+            <ul>
+              <li><code>font</code> 文字的外观，大小和颜色;</li>
+              <li><code>u</code> 文本下划线;</li>
+              <li><code>center</code> 居中对齐;</li>
+              <li><code>s</code> 删除线;</li>
+              <li><code>strike</code> 删除线;</li>
+              <li><code>noframes</code> 无视框时的内容;</li>
+              <li><code>iframe</code> 定义嵌入视图;</li>
+              <li><code>isindex</code> 不建议使用（可搜寻，使用<code>input</code>代替）;</li>
+              <li><code>dir</code> 目录式列举;</li>
+              <li><code>menu</code> 菜单列表;</li>
+              <li><code>basefont</code> 定义基本字体;</li>
+              <li><code>applet</code> 定义java程序;</li>
+              <li><code>frame</code> 定义个别视框;</li>
+              <li><code>frameset</code> 视框格式总定义;</li>
+            </ul>
+            <h3 id="downgrades">多媒体元素降级处理</h3>
+            <p>给多媒体元素，比如<code>canvas</code>、<code>videos</code>、 <code>images</code>增加<code>alt</code>属性，提高可用性（特别是常用的<code>img</code>标签，尽可量得加上<code>alt</code>属性，提供图片的描述信息）。</p>
+<pre class="bg-danger">&lt;!-- 不推荐 --&gt;
+&lt;img src="world.jpg"&gt;</pre>
+<pre class="bg-success">&lt;!-- 推荐 --&gt;
+&lt;img src="world.jpg" alt="our world images"&gt;</pre>
+            <h3 id="typeAttribute">type属性</h3>
+            <p>在样式表和脚本的标签中忽略<code>type</code>属性。</p>
+            <p>HTML5默认<code>type</code>为<code>text/css</code>和<code>text/javascript</code>类型，所以没必要指定。即便是老浏览器也是支持的。</p>
+<pre class="bg-danger">&lt;!-- 不推荐 --&gt;
+&lt;link rel="stylesheet" href="//www.google.com/css/maia.css" type="text/css"&gt;
+&lt;script src="//www.google.com/js/gweb/analytics/autotrack.js" type="text/javascript"&gt;&lt;/script&gt;</pre>
+<pre class="bg-success">&lt;!-- 推荐 --&gt;
+&lt;link rel="stylesheet" href="//www.google.com/css/maia.css"&gt;
+&lt;script src="//www.google.com/js/gweb/analytics/autotrack.js"&gt;&lt;/script&gt;</pre>
+          </div>
+          <div class="docs-section">
+            <h2 id="htmlFormRules">HTML代码格式规则</h2>
+            <p>每个块元素、列表元素或表格元素都独占一行，每个子元素都相对于父元素进行缩进。按设计稿划分模块，尽量使页面模块化，模块与模块之前要有清晰的注释。</p>
+            <img src="images/html1.jpg" alt="html form" class="img-thumbnail">
+            <p>如上面页面框架，推荐写法：</p>
+<pre class="bg-success">&lt;!-- hader --&gt;
+&lt;div class="header"&gt;header&lt;/div&gt;
+&lt;!-- /hader --&gt;
+&lt;!-- nav --&gt;
+&lt;div class="nav"&gt;nav&lt;/div&gt;
+&lt;!-- /nav --&gt;
+&lt;!-- main --&gt;
+&lt;div class="main"&gt;
+  &lt;!-- container --&gt;
+  &lt;div class="container"&gt;
+    &lt;!--news--&gt;
+    &lt;div class="news"&gt;
+      &lt;h2&gt;news&lt;h2&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;!--news--&gt;
+  &lt;/div&gt;
+  &lt;!--/container--&gt;
+  &lt;!--sidebar--&gt;
+  &lt;div class="sidebar"&gt;sidebar&lt;/div&gt;
+  &lt;!--sidebar--&gt;
+&lt;/div>
+&lt;!--/main--&gt;
+&lt;!--footer--&gt; 
+&lt;div class="footer"&gt;footer&lt;/div&gt; 
+&lt;!--/footer--&gt;</pre>
+          </div>
+          <div class="docs-section">
+            <h2 id="SEO">HTML与SEO</h2>
+            <h3 id="levelOfPage">页面良好层次</h3>
+            <p>保证整个页面在未加载样式表时仍有较好的层次清晰的页面结构。</p>
+<pre class="bg-danger">&lt;!-- 不推荐 --&gt;
+&lt;div class="logo"&gt;My Site&lt;/div&gt;
+&lt;div class="nav"&gt;
+  &lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;a href="#"&gt;News&lt;/a&gt;
+  &lt;a href="#"&gt;Mobile&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="news"&gt;
+  &lt;div&gt;News&lt;/div&gt;
+  &lt;a href="#"&gt;news list 1&lt;/a&gt;
+  &lt;a href="#"&gt;news list 2&lt;/a&gt;
+  &lt;a href="#"&gt;news list 3&lt;/a&gt;
+&lt;/div&gt;</pre>
+<pre class="bg-success">&lt;!-- 推荐 --&gt;
+&lt;h1 class="logo"&gt;My Site&lt;/h1&gt;
+&lt;ul class="nav"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;News&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Mobile&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="news"&gt;
+  &lt;h2&gt;News&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;news list 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;news list 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;news list 3&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>            
+            <h3 id="weightedTag">权重标签使用</h3>
+            <strong>H标签使用</strong>
+            <ul>
+              <li><code>h1</code> 权重高，体现当前网页中相对比较重要的信息，但不宜过多，建议一个页面只放一个;</li>
+              <li><code>h2</code> 可以做副标题;</li>
+              <li><code>h3</code> 可以做新闻列表;</li>
+              <li><code>h4</code>-<code>h6</code> 可做相关新闻的列表标签属性完整;</li>
+            </ul>
+            <strong><code>strong</code>、<code>b</code>使用</strong>
+            <p>将需要加粗的文字使用<code>b</code>标签来显示。</p>
+            <p>将需要强调的文字（主要指包含关键词的信息）使用<code>strong</code>标签来强调主要内容。</p>
+            <p class="text-danger">注：<code>b</code>是粗体标签，属于实体标签，它所包围的字符将被设为<code>bold</code>（粗体）；<code>strong</code> 是加重语气标签，属于逻辑标签，它的作用是加强字符语气。</p>
+            <h3 id="tagAttributes">标签属性使用</h3>
+            <p>在很多情况下，<code>a</code>都要使用<code>title</code>来说明该链接的相关说明或目的意义。</p>
+            <p>例如：当使用<code>overflow</code>隐藏掉a中的溢出文字时，该<code>a</code>中的<code>title</code>是必不可少的，它可以告诉用户被隐藏掉的文字内容是什么；又或者当一个图片型链接出现时，该<code>a</code>中的<code>title</code>同样是必不可少的，它可以告诉用户这个图片链接是做什么用的。</p>
+            <p class="text-danger">注：仅在<code>img</code>里添加<code>alt</code>标签在火狐提示文字是出不来的，<code>alt</code>是图片加载失败或未加载完全时显示出来的提示文字，要想鼠标移上去显示提示信息应该用<code>title</code>，严谨的写法是<code>img</code>里加入<code>alt</code>和<code>title</code>这两个标签。</p>
+            <h3 id="littleCode">精简代码</h3>
+            <p>代码保持精简，最优化，这样搜索引擎才更喜欢。</p>
+          </div>
+        </div>
+        <div class="col-md-3 hidden-print hidden-xs hidden-sm sidebar-box">
+          <div class="sidebar" data-spy="affix"  data-offset-top="300">
+            <ul class="nav docs-sidenav">
+              <li>
+                <a href="#typographyRules" title="">排版规则</a>
+                <ul class="nav">
+                  <li><a href="#indent" title="">缩进</a></li>
+                  <li><a href="#spell" title="">大小写</a></li>
+                  <li><a href="#space" title="">行尾空格</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#metaRules" title="">常规Meta规则</a>
+                <ul class="nav">
+                  <li><a href="#encode" title="">编码</a></li>
+                  <li><a href="#notes" title="">注释</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#routineHtmlRules" title="">常规HTML设计规则</a>
+                <ul class="nav">
+                  <li><a href="#docType" title="">文档类型</a></li>
+                  <li><a href="#htmlValidity" title="">HTML 的正确性</a></li>
+                  <li><a href="#semanticHtml" title="">HTML 的语义性</a></li>
+                  <li><a href="#downgrades" title="">多媒体元素降级处理</a></li>
+                  <li><a href="#typeAttribute" title="">type属性</a></li>
+                </ul>
+              </li>
+              <li><a href="#htmlFormRules" title="">HTML代码格式规则</a></li>
+              <li>
+                <a href="#SEO" title="">HTML与SEO</a>
+                <ul class="nav">
+                  <li><a href="#levelOfPage" title="">页面良好层次</a></li>
+                  <li><a href="#weightedTag" title="">权重标签使用</a></li>
+                  <li><a href="#tagAttributes" title="">标签属性使用</a></li>
+                  <li><a href="#littleCode" title="">精简代码</a></li>
+                </ul>
+              </li>
+            </ul>
+            <a href="#top" title="" class="back-to-top">返回顶部</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  </body>
+</html>

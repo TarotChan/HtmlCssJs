@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>12-17自己整理的编码规范</title>
+	<style>
+	  body{
+	  	background-color: #FFa;
+	  }
+	  .color-normal{
+	  	background-color: #FFa;
+	  }
+	  .color-right{
+	  	background-color: #ccF;
+	  }
+	  .color-error{
+	  	background-color: #Fcc;
+	  }
+	  .color-code{
+	  	color: #F0F;
+	  	font: bold .8em cursive;
+	  }
+	  .color-xx{
+	  	background-color: #cFc;
+	  }
+	  .nav{
+	  	float: right;
+	  	list-style-type: none;
+	  	padding: 10px;
+	  	border: 1px solid #000;
+	  	font: .8em sans-serif;
+	  }
+	</style>
+</head>
+<body>
+  <h1>概述</h1>
+  <p>今天决定把所有的编码格式都规范一遍，当然这是我自己的编码规范...就是吸收一下别人的优点，然后自己再加一点创意。</p>
+  <ul>
+    <li>首先，目前的标题一律使用当天的日期 + 今日任务简述</li>
+    <li class="color-normal">其次所写的网页一律使用淡黄色背景(<span class="color-code">#FF8</span> / <span class="color-code">#FFA</span>)</li>
+    <li class="color-right">正确的代码块用的是淡蓝色背景(<span class="color-code">#CCF</span>)</li>
+    <li class="color-error">错误实例一律使用淡红色背景(<span class="color-code">#FCC</span>)</li>
+    <li class="color-normal">标识符用<span class="color-code">紫红色</span></li>
+    <li class="color-xx">淡绿色也很好看的样子！找个机会让它好好发挥作用</li>
+    <li>经过调研...<span style="font-family: cursive;">cursive的字母字体比较好看，中文字体和其他的一样，</span><span style="font-family: monospace;">monospace比一般字体要小，而且也更紧凑</span></li>
+    <li>接下来我要做一个导航栏，就是会根据页面滑动的那种</li>
+    <li>因为觉得更改样式麻烦，所以我把样式表和html文件分离了，具体做法是在网页的head标签对中使用 link 标记来引入外部样式表文件。使用语法如下：</li>
+    <li>&ltlink href="mystyle.css" rel="stylesheet" type="text/css"/&gt，type属性可省略</li>
+  </ul>
+</body>
+</html>

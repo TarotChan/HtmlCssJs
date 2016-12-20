@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>我的第一个网页：前端编码规范</title>
+</head>
+<body style="background-color: #CFF">
+  <h1>2013/12/12</h1>
+  <!-- 一些吐槽 -->
+  <div style="background-color: #9CC;"><h2>一些吐槽</h2>
+  <ul>
+    <li>首先要模仿一下别人的网页...</li>
+    <li>然后写一个前端技能的结构图...目前我就只是知道一些html，css，js的基础知识，并没有实际应用经验，接下来我会使用html+css来做一个结构图示，展现以下我这几天看的东西。</li>
+    <li>这是html5中新增的语义化标签：</li>
+    <li>首先由于尖角号不能出现在html中，所以我使用了&lt（“& + lt”）、以及&gt（“& + gt”）来替换。</li>
+    <li>然后发现的问题是文本中的尖叫号实在太多，我如果一个一个的改的话十分耗时间，所以决定查询sublime的快捷键帮助我（ctrl + d）</li>
+    <li>好了，他现在看起来特别乱...我需要把他好好排一下版，目前能想到的办法就是不停的使用&ltli&gt标签...但我知道肯定有更好的办法，以后会知道的吧。</li>
+    <li>单标签的斜杠前面记得要加空格...</li>
+    <li>还有，我刚刚还是花了好长的时间把每一行都加了&ltbr&gt...以后这种工作可以交给正则表达式弄的吧..这可以当一个练手的小项目</li>
+    <li>还有，其实我目前只关注结构化的语义标签，其实那些可以不管的...而且那些东西完成可以写成一个列表！！</li>
+    <li>然后查排班的时候发现我现在排版是有多糟糕...pppp泥煤啊，应该使用列表，我先把下面的东西换成自定义列表</li>
+    <li>ctrl+shift+w是什么鬼...刚刚按了一下闪退了！！</li>
+    <li>目前在把所有的内容换成列表中。。话说剪切的快捷键是啥..</li>
+    <li>打了半天的br标签又被我一个一个的删掉了。。想哭还有上面这段也要改成无序列表了。。</li>
+    <li>好吧，现在感觉好多了...其实就是缩进自动了，没那么难看了，而且我也知道了剪切是ctrl +
+    x</li>
+    <li>刚刚又剽窃了一个好好看的页面..先把后面的坑补上先...</li>
+    <li>好辣妈的我不改了！现在开始套上样式表。（改的我好无聊...一直在做重复的事）</li>
+    <li>据说要尽可能注释，吓得我赶快注释了...</li>
+    <li>第一个要解决的问题终于想好了！我要做一个关于html和css编码规范的静态网页~样式参考test01，今天先研究一下样式啥的吧，这周要交出一个成品。</li>
+    <li>sublime缩进：选中多行以后按ctrl + [或者]向左或者向右缩进。</li>
+    <li>看了下那个网页使用bootstrap开发的，百度了一下，感觉可以今明两天迅速过一遍~</li>
+  </ul></div><hr />
+  <!-- /一些吐槽 -->
+  
+  <!-- html5中新增的语义化标签 -->
+  <div style="background-color: #F99;"><h2>HTML</h2>
+  <h3>HTML5语义标签</h3>
+  <dl>
+    <dt>&ltarticle&gt标签定义外部的内容。比如来自一个外部的新闻提供者的一篇新的文章，或者来自 blog的文本，或者是来自论坛的文本。亦或是来自其他外部源内容。</dt>
+    <dd>HTML5:&ltarticle&gt&lt/article&gt</dd>
+    <dd>HTML4:&ltdiv&gt&lt/div&gt</dd>
+    <dt>&ltaside&gt标签定义 article 以外的内容。aside 的内容应该与 article 的内容相关。</dt>
+    <dd>HTML5:&ltaside&gtAside 的内容是独立的内容，但应与文档内容相关。&lt/aside&gt</dd>
+    <dd>HTML4:&ltdiv&gtAside 的内容是独立的内容，但应与文档内容相关。&lt/div&gt</dd>
+    <dt>&ltaudio&gt 标签定义声音，比如音乐或其他音频流。</dt>
+    <dd>HTML5:&ltaudio src="someaudio.wav"&gt您的浏览器不支持 audio 标签。&lt/audio&gt</dd>
+    <dd>HTML4:&ltobject type="application/ogg" data="someaudio.wav"&gt&ltparam name="src" value="someaudio.wav"&gt&lt/object&gt</dd>
+    <dt>&ltcanvas&gt 标签定义图形，比如图表和其他图像。这个 HTML 元素是为了客户端矢量图形而设计的。它自己没有行为，但却把一个绘图 API 展现给客户端 JavaScript 以使脚本能够把想绘制的东西都绘制到一块画布上。</dt>
+    <dd>HTML5:&ltcanvas id="myCanvas" width="200" height="200"&gt&lt/canvas&gt</dd>
+    <dd>HTML4:&ltobject data="inc/hdr.svg" type="image/svg+xml" width="200" height="200"&gt&lt/object&gt</dd>
+    <dt>&ltcommand&gt 标签定义命令按钮，比如单选按钮、复选框或按钮。</dt>
+    <dd>HTML5: &ltcommand onclick=cut()" label="cut"&gt</dd>
+    <dd>HTML4: none</dd>
+    <dt>&ltdatalist&gt 标签定义可选数据的列表。与 input 元素配合使用，就可以制作出输入值的下拉列表。</dt>
+    <dd>HTML5: &ltdatalist&gt&lt/datalist&gt</dd>
+    <dd>HTML4: see combobox.</dd>
+    <dt>&ltdetails&gt 标签定义元素的细节，用户可进行查看，或通过点击进行隐藏。与 &ltlegend&gt 一起使用，来制作 detail 的标题。该标题对用户是可见的，当在其上点击时可打开或关闭 detail。</dt>
+    <dd>HTML5: &ltdetails&gt&lt/details&gt</dd>
+    <dd>HTML4: &ltdl style="display:hidden"&gt&lt/dl&gt</dd>
+    <dt>&ltembed&gt 标签定义嵌入的内容，比如插件。</dt>
+    <dd>HTML5: &ltembed src="horse.wav" /&gt</dd>
+    <dd>HTML4: &ltobject data="flash.swf"  type="application/x-shockwave-flash"&gt&lt/object&gt</dd>
+    <dt>&ltfigcaption&gt 标签定义 figure 元素的标题。”figcaption” 元素应该被置于 “figure” 元素的第一个或最后一个子元素的位置。</dt>
+    <dd>HTML5: &ltfigure&gt&ltfigcaption&gtPRC&lt/figcaption&gt&lt/figure&gt</dd>
+    <dd>HTML4: none</dd>
+    <dt>&ltfigure&gt 标签用于对元素进行组合。使用 &ltfigcaption&gt 元素为元素组添加标题。</dt>
+    <dd>HTML5: &ltfigure&gt&ltfigcaption&gtPRC&lt/figcaption&gt&ltp&gtThe People's Republic of China was born in 1949...&lt/p&gt&lt/figure&gt</dd>
+    <dd>HTML4: &ltdl&gt&lth1&gtPRC&lt/h1&gt&ltp&gtThe People's Republic of China was born in 1949...&lt/p&gt&lt/dl&gt</dd>
+    <dt>&ltfooter&gt 标签定义 section 或 document 的页脚。典型地，它会包含创作者的姓名、文档的创作日期以及/或者联系信息。</dt>
+    <dd>HTML5: &ltfooter&gt&lt/footer&gt</dd>
+    <dd>HTML4: &ltdiv&gt&lt/div&gt</dd>
+    <dt>&ltheader&gt 标签定义 section 或 document 的页眉。</dt>
+    <dd>HTML5: &ltheader&gt&lt/header&gt</dd>
+    <dd>HTML4: &ltdiv&gt&lt/div&gt</dd>
+    <dt>&lthgroup&gt 标签用于对网页或区段（section）的标题进行组合。</dt>
+    <dd>HTML5: &lthgroup&gt&lt/hgroup&gt</dd>
+    <dd>HTML4: &ltdiv&gt&lt/div&gt</dd>
+    <dt>&ltkeygen&gt 标签定义生成密钥。</dt>
+    <dd>HTML5: &ltkeygen&gt</dd>
+    <dd>HTML4: none</dd>
+    <dt>&ltmark&gt主要用来在视觉上向用户呈现那些需要突出的文字。&ltmark&gt标签的一个比较典型的应用就是在搜索结果中向用户高亮显示搜索关键词。</dt>
+    <dd>HTML5: &ltmark&gt&lt/mark&gt</dd>
+    <dd>HTML4: &ltspan&gt&lt/span&gt</dd>
+    <dt>&ltmeter&gt 标签定义度量衡。仅用于已知最大和最小值的度量。必须定义度量的范围，既可以在元素的文本中，也可以在 min/max 属性中定义。</dt>
+    <dd>HTML5: &ltmeter&gt&lt/meter&gt</dd>
+    <dd>HTML4: none</dd>
+    <dt>&ltnav&gt 标签定义导航链接的部分。</dt>
+    <dd>HTML5: &ltnav&gt&lt/nav&gt</dd>
+    <dd>HTML4:&ltul&gt&lt/ul&gt</dd>
+    <dt>&ltoutput&gt 标签定义不同类型的输出，比如脚本的输出。</dt>
+    <dd>HTML5: &ltoutput&gt&lt/output&gt</dd>
+    <dd>HTML4: &ltspan&gt&lt/span&gt</dd>
+    <dt>&ltprogress&gt 标签运行中的进程。可以使用 &ltprogress&gt 标签来显示 JavaScript 中耗费时间的函数的进程。</dt>
+    <dd>HTML5: &ltprogress&gt&lt/progress&gt</dd>
+    <dd>HTML4: none</dd>
+    <dt>&ltrp&gt 标签在 ruby 注释中使用，以定义不支持 ruby 元素的浏览器所显示的内容。</dt>
+    <dd>HTML5: &ltruby&gt漢 &ltrt&gt&ltrp&gt(&lt/rp&gtㄏㄢˋ&ltrp&gt)&lt/rp&gt&lt/rt&gt&lt/ruby&gt</dd>
+    <dd>HTML4: none</dd>
+    <dt>&ltrt&gt 标签定义字符（中文注音或字符）的解释或发音。</dt>
+    <dd>HTML5: &ltruby&gt漢 &ltrt&gt ㄏㄢˋ &lt/rt&gt&lt/ruby&gt</dd>
+    <dd>HTML4: none</dd>
+    <dt>&ltruby&gt 标签定义 ruby 注释（中文注音或字符）。</dt>
+    <dd>HTML5: &ltruby&gt漢 &ltrt&gt&ltrp&gt(&lt/rp&gtㄏㄢˋ&ltrp&gt)&lt/rp&gt&lt/rt&gt&lt/ruby&gt</dd>
+    <dd>HTML4: none</dd>
+    <dt>&ltsection&gt 标签定义文档中的节（section、区段）。比如章节、页眉、页脚或文档中的其他部分。</dt>
+    <dd>HTML5: &ltsection&gt&lt/section&gt</dd>
+    <dd>HTML4: &ltdiv&gt&lt/div&gt</dd>
+    <dt>&ltsource&gt 标签为媒介元素（比如 &ltvideo&gt 和 &ltaudio&gt）定义媒介资源。</dt>
+    <dd>HTML5: &ltsource&gt</dd>
+    <dd>HTML4: &ltparam&gt</dd>
+    <dt>&ltsummary&gt 标签包含 details 元素的标题，”details” 元素用于描述有关文档或文档片段的详细信息。”summary” 元素应该是 “details” 元素的第一个子元素。</dt>
+    <dd>HTML5: &ltdetails&gt&ltsummary&gtHTML 5&lt/summary&gtThis document teaches you everything you have to learn about HTML 5.&lt/details&gt</dd>
+    <dd>HTML4: none</dd>
+    <dt>&lttime&gt 标签定义日期或时间，或者两者。</dt>
+    <dd>HTML5: &lttime&gt&lt/time&gt</dd>
+    <dd>HTML4: &ltspan&gt&lt/span&gt</dd>
+    <dt>&ltvideo&gt 标签定义视频，比如电影片段或其他视频流。</dt>
+    <dd>HTML5: &ltvideo src="movie.ogg" controls="controls"&gt您的浏览器不支持 video 标签。&lt/video&gt</dd>
+    <dd>HTML4:&ltobject type="video/ogg" data="movie.ogv"&gt&ltparam name="src" value="movie.ogv"&gt&lt/object&gt</dd>
+  </dl>
+  <!-- /html5中新增的语义化标签 -->
+
+  <!-- html中编码规范 -->
+  <h3>HTML编码规范</h3>
+  <dl>
+    <dt>部分标签说明：</dt>
+    <dd>div 主要用于布局，分割页面的结构;</dd>
+    <dd>ul/ol 主要用于无序/有序列表;</dd>
+    <dd>dl/dt/dd 当页面中出现第一行为类似标题/简述，然后下面为详细描述的内容时应该使用该标签;</dd>
+    <dd>span 没有特殊的意义，可以用作排版的辅助，然后在css中定义span;</dd>
+    <dd>h1-h6 标题, 根据重要性依次递减;</dd>
+    <dd>h1 最重要的标题;</dd>
+    <dd>label 使表单更有亲和力而且能辅助表单排版;</dd>
+    <dt>给canvas、videos、 images增加alt属性</dt>
+    <dt>省略type属性</dt>
+    <dt style="float: left;"><img src="html1.jpg" alt="页面布局图片" style="width: 300px; height: 450px;"></dt>
+    <dd>
+      <p>按照上面的布局，标准写法是：</p>
+      <pre>
+      &lt;!-- hader --&gt;
+      &lt;div class="header"&gt;header&lt;/div&gt;
+      &lt;!-- /hader --&gt;
+      &lt;!-- nav --&gt;
+      &lt;div class="nav"&gt;nav&lt;/div&gt;
+      &lt;!-- /nav --&gt;
+      &lt;!-- main --&gt;
+      &lt;div class="main"&gt;
+        &lt;!-- container --&gt;
+        &lt;div class="container"&gt;
+          &lt;!--news--&gt;
+          &lt;div class="news"&gt;
+            &lt;h2&gt;news&lt;h2&gt;
+              &lt;p&gt;...&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;!--news--&gt;
+        &lt;/div&gt;
+        &lt;!--/container--&gt;
+        &lt;!--sidebar--&gt;
+        &lt;div class="sidebar"&gt;sidebar&lt;/div&gt;
+        &lt;!--/sidebar--&gt;
+        &lt;/div>
+      &lt;!--/main--&gt;
+      &lt;!--footer--&gt; 
+      &lt;div class="footer"&gt;footer&lt;/div&gt; 
+      &lt;!--/footer--&gt;</pre></dd>
+    <dt>保证整个页面在未加载样式表时仍有较好的层次清晰的页面结构。</dt>
+  </dl></div><hr />
+  <!-- /html中编码规范 -->
+  
+  <!-- css中编码规范 -->
+  <div style="background-color: #FF6;"><h2>CSS</h2>
+  <dl>
+    <dt>统一采用小写英文字母、数字、“-” 的组合。其中不得包含汉字、空格和特殊字符。("_"居然被吐槽屌丝风格...)</dt>
+    <dd><pre>
+    /* 不推荐 */
+    .demoimage {}  /* "demo" 和 "image" 中间没加 "-" */
+    /* 不推荐 */
+    .error_status {}  /* 用下划线 "_" 是屌丝的风格 */
+    /* 推荐 */
+    .ads-sample {}</pre></dd>
+    <dt>毕竟使用过多的祖先选择器</dt>
+    <dd><pre>
+    /* 不推荐 */
+    ul.example {}
+    .example1 .example2 .example3 .example4 {}
+    /* 推荐 */
+    .example {}
+    .example1, 
+    .example2 {}</pre></dd>
+    <dt>非必要的情况下不要使用元素标签名和ID或class进行组合。</dt>
+    <dd><pre>
+    /* 不推荐 */
+    ul#example {}
+    div.error {}
+    /* 推荐 */
+    #example {}
+    .error {}</pre></dd>
+    <dt>简化css语句</dt>
+    <dd>写属性值的时候尽量使用缩写。就是写成一行...</dd>
+    <dd>属性值为0时，忽略单位</dd>
+    <dd>属性值出现小数点忽略0</dd>
+    <dd>省略URI外的引号</dd>
+    <dd>十六进制尽可能使用3个字符</dd>
+    <dd>尽可能地避免使用hack的方式解决浏览器样式兼容性问题。尽量避免使用CSS filters。(我一直以为hack施好的办法...)</dd>
+    <dd>一个类一行，每个属性间用空格隔开，不用强制换行。</dd>
+    <dd>每个选择器和声明都要独立新行。</dd>
+    <dd>出于一致性的原因，在属性名和值之间加一个空格（可不是属性名和冒号之间噢）。</dd>
+    <dd>考虑到一致性和拓展性，请在每个声明尾部都加上分号。</dd>
+    <dt>书写顺序按显示属性，自身属性， 文本属性顺序。</dt>
+    <dd>显示属性<ul>
+      <li>display</li><li>list-style</li><li>position</li>
+      <li>float</li><li>clear</li></ul></dd>
+    <dd>自身属性<ul>
+      <li>width</li><li>height</li><li>margin</li>
+      <li>padding</li><li>border</li><li>background</li>
+      </ul></dd>
+    <dd>文本属性<ul>
+      <li>color</li><li>font</li><li>text-decoration</li><li>text-align</li>
+      <li>vertical-align</li><li>white-space</li></ul></dd>
+    <dt>常用技巧</dt>
+    <dd>样式初始化（太长了我就不复制了...）</dd>
+    <dd>清除浮动</dd>
+  </dl></div>
+
+</body>
+</html>

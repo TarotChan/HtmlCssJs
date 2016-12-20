@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery学习笔记</title>
+</head>
+<body>
+  <p>经过市场调研以后，发现JQuery在目前有着不可撼动的地位，所以决定好好的学一下这个js框架。
+  JQuery是一个写好的js文件，秩序下载并引用即可使用。</p>
+  <h2>使用JQuery的方法：</h2>
+  <ul>
+    <li>下载到本地；</li>
+    <li>在&lthead&gt标签里CDN引用：<ul>
+      <li>菜鸟教程CDN&ltscript src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"&gt</li>
+      <li>百度CDN&ltscript src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"&gt</li>
+      <li>又拍云CDN&ltscript src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"&gt</li>
+      <li>新浪CDN&ltscript src="http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"&gt</li>
+      <li>不大推荐使用Google CDN来获取版本，因为Google产品在中国很不稳定。</li>
+      </ul>
+    </li>
+  </ul>
+  <h2>jQuery语法</h2>
+  <ul>例如：
+    <li>$(this).hide() - 隐藏当前元素</li>
+    <li>$("p").hide() - 隐藏所有 p 元素</li>
+    <li>$("p.test").hide() - 隐藏所有 class="test" 的 p 元素</li>
+    <li>$("#test").hide() - 隐藏所有 id="test" 的元素</li>
+  </ul>
+  <h2>文档就绪事件</h2>
+  <p>为了防止文档在完全加载（就绪）之前运行 jQuery 代码。如果在文档没有完全加载之前就运行函数，操作可能失败。</p>
+  <ul>
+    <li>$(document).ready(function(){ // 开始写 jQuery 代码...});</li>
+    <li>$(function(){ // 开始写 jQuery 代码...});</li>
+  </ul>
+  <h2>jQuery选择器</h2>
+  <p>基于CSS选择器。</p>
+  <ul>
+    <li>通配选择器：*</li>
+    <li>元素选择器：元素名字（p、h2、li）</li>
+    <li>ID选择器：#id</li>
+    <li>类选择器：.class</li>
+    <li>属性选择器：[~]</li>
+  </ul>
+  <h2>独立文件中使用jQ函数：&ltscript src="my_jquery_functions.js"&gt&lt/script&gt</h2>
+  <h2>jQuery事件</h2>
+  <h3>常用事件:</h3>
+  <ul>
+    <li>鼠标事件：click（单击）、dbclick（双击）、mouseenter（穿过）、mouseleave（离开）、mousedown(和click表现一样)、mouseup(在元素上松开鼠标)、hover(悬停，内有两个函数，第一个在悬停时触发，第二个在鼠标离开元素时触发，如果仅有一个函数，则两种情况下均出发一次)、focus（表单获得焦点时：指单击或者tab定位到元素时）、blur（失去焦点时）</li>
+    <li>键盘事件：keypress、keydown、keyup</li>
+    <li>表单事件：submit、change、focus、blur</li>
+    <li>文档/窗口事件：load、resize、scroll、unload</li>
+  </ul>
+  <h3>jQuery事件语法</h3>
+  <pre>在 jQuery 中，大多数 DOM 事件都有一个等效的 jQuery 方法。
+页面中指定一个点击事件：
+$("p").click();
+下一步是定义什么时间触发事件。您可以通过一个事件函数实现：
+$("p").click(function(){
+    // 动作触发后执行的代码!!
+});</pre>
+  <h2>jQuery效果</h2>
+  <h3>隐藏和显示</h3>
+  <p style="color: #CC4">$(document).ready(function(){}里的函数是按顺序执行的。</p>
+  <pre>
+  $(selector).hide(speed,callback);（隐藏）
+$(selector).show(speed,callback);（显示）
+$(selector).toggle(speed,callback);（隐藏/显示）
+可选的 speed 参数规定隐藏/显示的速度，可以取以下值："slow"、"fast" 或毫秒(1000)。
+可选的 callback 参数是隐藏或显示完成后所执行的函数名称。</pre>
+  <h3>淡入淡出</h3>
+  <ul>通过 jQuery，您可以实现元素的淡入淡出效果。jQuery 拥有下面四种 fade 方法：
+    <li>fadeIn()：淡入</li>
+    <li>fadeOut():淡出</li>
+    <li>fadeToggle():淡入淡出</li>
+    <li>fadeTo():控制元素颜色</li>
+  </ul><ul>语法：
+    <li>$(selector).fadeIn(speed,callback);</li>
+    <li>$(selector).fadeOut(speed,callback);</li>
+    <li>$(selector).fadeToggle(speed,callback);</li>
+    <li>可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。
+可选的 callback 参数是 fading 完成后所执行的函数名称。</li>
+    <li>$(selector).fadeTo(speed,opacity,callback);</li>
+    <li>必需的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。
+fadeTo() 方法中必需的 opacity 参数将淡入淡出效果设置为给定的不透明度（值介于 0 与 1 之间）。
+可选的 callback 参数是该函数完成后所执行的函数名称。</li>
+  </ul>
+  <h3>滑动</h3>
+  <ul>jQuery 滑动方法可使元素上下滑动。
+    <li>slideDown():向下滑动</li>
+    <li>$(selector).slideDown(speed,callback);</li>
+    <li>slideUp():向上滑动</li>
+    <li>$(selector).slideUp(speed,callback);</li>
+    <li>slideToggle():向上/下滑动</li>
+    <li>$(selector).slideToggle(speed,callback);</li>
+    <li>可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。
+可选的 callback 参数是滑动完成后所执行的函数名称。</li>
+  </ul>
+  <p style="color: #9CC;">显示/隐藏、淡入/淡出、滑动都是用来显示元素的，其中显示/隐藏是左右移动元素，滑动是上下移动元素，淡入/淡出是在原位置进行显示隐藏的特效</p>
+  <h3>动画</h3>
+  <ul>
+    <li>jQuery animate() 方法用于创建自定义动画。</li>
+    <li>$(selector).animate({params},speed,callback);</li>
+    <li>必需的 params 参数定义形成动画的 CSS 属性。
+可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。
+可选的 callback 参数是动画完成后所执行的函数名称。</li>
+    <li>默认情况下，所有的 HTML 元素有一个静态的位置，且是不可移动的。 
+如果需要改变为，我们需要将元素的 position 属性设置为 relative, fixed, 或 absolute!</li>
+    <li>生成动画过程中可使用多个属性</li>
+    <li>$("button").click(function(){
+  $("div").animate({
+    left:'250px',
+    opacity:'0.5',
+    height:'150px',
+    width:'150px'
+  });
+});</li>
+	<li>使用 Camel 标记法书写所有的属性名，比如，必须使用 paddingLeft 而不是 padding-left，使用 marginRight 而不是 margin-right，等等。</li>
+	<li>色彩动画并不包含在核心 jQuery 库中。如果需要生成颜色动画，您需要下载 颜色动画 插件。</li>
+	<li>也可以定义相对值（该值相对于元素的当前值）。需要在值的前面加上 += 或 -=：</li>
+	<li>$("div").animate({
+    left:'250px',
+    height:'+=150px',
+    width:'+=150px'
+  });</li>
+  <li>使用预定义值：甚至可以把属性的动画值设置为 "show"、"hide" 或 "toggle"：</li>
+  <li>$("div").animate({
+    height:'toggle'
+  });</li>
+  <li>队列功能：编写多个 animate() 调用，jQuery 会创建包含这些方法调用的"内部"队列。然后逐一运行这些 animate 调用。</li>
+	</ul>
+	<h3>效果停止：stop()</h3>
+	<ul>
+		<li>jQuery stop() 方法用于停止动画或效果，在它们完成之前。
+	stop() 方法适用于所有 jQuery 效果函数，包括滑动、淡入淡出和自定义动画。</li>
+		<li>$(selector).stop(stopAll,goToEnd);</li>
+		<li>可选的 stopAll 参数规定是否应该清除动画队列。默认是 false，即仅停止活动的动画，允许任何排入队列的动画向后执行。
+	可选的 goToEnd 参数规定是否立即完成当前动画。默认是 false。
+	因此，默认地，stop() 会清除在被选元素上指定的当前动画。</li>
+	</ul>
+	<h3>回调函数：callback()</h3>
+	<p>当效果完全实现后使用。</p>
+	<p>$(selector).hide(speed,callback);</p>
+	<p>$("button").click(function(){
+	  $("p").hide("slow",function(){
+	    alert("段落现在被隐藏了");
+	  });
+	});</p>
+	<h2>jQuery与HTML CSS</h2>
+	<h3>操作DOM</h3>
+	<ul>DOM = Document Object Model（文档对象模型）
+		<li>text() - 设置或返回所选元素的文本内容（不包括HTML标记&gt&lt）</li>
+		<li>html() - 设置或返回所选元素的内容（包括 HTML 标记）</li>
+		<li>val() - 设置或返回表单字段的值(value)</li>
+		<li>attr() - 设置或返回所选属性的值</li>
+		<li>append() - 在被选元素的结尾插入内容</li>
+		<li>$("p").append("在结尾追加文本");</li>
+		<li>prepend() - 在被选元素的开头插入内容</li>
+		<li>$("p").prepend("在开头追加文本");</li>
+		<li>after() - 在被选元素之后插入内容</li>
+		<li>before() - 在被选元素之前插入内容</li>
+		<li><pre>function afterText(){
+		var txt1="&ltb&gt I &lt/b&gt";                    // 使用 HTML 创建元素
+		var txt2=$("&lti&gt&lt/i&gt").text("love ");     // 使用 jQuery 创建元素
+		var txt3=document.createElement("big");  // 使用 DOM 创建元素
+		txt3.innerHTML="jQuery!";
+		$("img").after(txt1,txt2,txt3);          // 在图片后添加文本
+	}</pre></li>
+	</ul>
+	<h3>删除元素</h3>
+	<ul>
+		<li>remove() - 删除被选元素（及其子元素）</li>
+		<li>包括被选元素也会被移除</li>
+		<li>empty() - 从被选元素中删除子元素</li>
+		<li>被选元素依然存在</li>
+		<li>$("p").remove(".italic");</li>
+		<li>删除p中的italic类</li>
+	</ul>
+	<h3>操作CSS</h3>
+	<ul>
+		<li>addClass() - 向被选元素添加一个或多个类</li>
+		<li>removeClass() - 从被选元素删除一个或多个类</li>
+		<li>toggleClass() - 对被选元素进行添加/删除类的切换操作</li>
+		<li>css()
+			<ul>
+				<li>返回css属性：$("p").css("background-color");</li>
+				<li>设置css属性：$("p").css("background-color","yellow");</li>
+				<li>设置多个css属性：$("p").css({"background-color":"yellow","font-size":"200%"});</li>
+			</ul>
+		</li>
+		<li>修改多个css属性时要记得花括号，所以仅修改一个css属性时也使用修改多个css属性的语法</li>
+	</ul>
+	<h3>修改尺寸</h3>
+	<ul>
+		<li>width() 方法设置或返回width（不包括内边距、边框或外边距）。</li>
+		<li>height() 方法设置或返回height（不包括内边距、边框或外边距）。</li>
+		<li>innerWidth() 方法返回width+padding（包括内边距）。</li>
+		<li>innerHeight() 方法返回height+padding（包括内边距）。</li>
+		<li>outerWidth() 方法返回width+padding+border（包括内边距和边框）。</li>
+		<li>outerHeight() 方法返回height+padding+border（包括内边距和边框）。</li>
+		<li>outerWidth(true) 方法返回width+padding+border+margin（包括内边距和边框）。</li>
+		<li>outerHeight(true) 方法返回height+padding+border+margin（包括内边距和边框）。</li>
+	</ul>
+	<h2>遍历</h2>
+	<h3>祖先遍历（向上）</h3>
+	<ul>
+		<li>parent() 方法返回被选元素的直接父元素。</li>
+		<li>parents() 方法返回被选元素的所有祖先元素，它一路向上直到文档的根元素 (<html>)。</li>
+		<li>也可以使用可选参数来过滤对祖先元素的搜索。</li>
+		<li>下面的例子返回所有 span 元素的所有祖先，并且它是 ul 元素：</li>
+		<li>$(document).ready(function(){ $("span").parents("ul"); });</li>
+		<li>parentsUntil() 方法返回介于两个给定元素之间的所有祖先元素。</li>
+		<li>下面的例子返回介于 span 与 div 元素之间的所有祖先元素：(不包括div)</li>
+		<li>$(document).ready(function(){ $("span").parentsUntil("div"); });</li>
+	</ul>
+	<h3>后代遍历（向下）</h3>
+	<ul>
+		<li>children() 方法返回被选元素的所有直接子元素。</li>
+		<li>所有所有！！！即和parents（）一样</li>
+		<li>下面的例子用于选中div里的含有class=“1”的p</li>
+		<li>$(document).ready(function(){ $("div").children("p.1"); });</li>
+		<li>find() 方法返回被选元素的后代元素，一路向下直到最后一个后代。</li>
+		<li>children（）仅在直接子元素上查找，而find（）在所有后代元素上查找子元素</li>
+		<li>返回属于 div 后代的所有 span 元素：</li>
+		<li>$(document).ready(function(){ $("div").find("span"); });</li>
+		<li>返回 div 的所有后代：</li>
+		<li>$(document).ready(function(){ $("div").find("*"); });</li>
+	</ul>
+	<h3>同胞遍历（水平）</h3>
+	<ul>
+		<li>siblings() 方法返回被选元素的所有同胞元素。</li>
+		<li>$(document).ready(function(){$("h2").siblings();});</li>
+		<li>同样，过滤也是可选的：</li>
+		<li>$(document).ready(function(){ $("h2").siblings("p"); });</li>
+		<li>next() 方法返回被选元素的下一个同胞元素。</li>
+		<li>nextAll() 方法返回被选元素的所有跟随的同胞元素。</li>
+		<li>$(document).ready(function(){ $("h2").nextAll(); });</li>
+		<li>nextUntil() 方法返回介于两个给定参数之间的所有跟随的同胞元素。</li>
+		<li>$(document).ready(function(){ $("h2").nextUntil("h6"); });</li>
+		<li>nextAll（）和nextUntil（）里面都有可选的参数用来过滤元素，而next（）的对象仅有下一个元素，可用来判断是不是想要的元素</li>
+		<li>next(),nextAll(),nextUntil()向后遍历</li>
+		<li>prev(), prevAll() 以及 prevUntil() 方法的工作方式与上面的方法类似，只不过方向相反而已：它们返回的是前面的同胞元素</li>
+	</ul>
+	<h3>过滤</h3>
+	<ul>
+		<li>first() 方法返回被选元素的首个元素。</li>
+		<li>last() 方法返回被选元素的最后一个元素。</li>
+		<li>eq() 方法返回被选元素中带有指定索引号的元素。</li>
+		<li>$(document).ready(function(){ $("p").eq(1); });</li>
+		<li>索引号从 0 开始，因此首个元素的索引号是 0 而不是 1。下面的例子选取第二个 p 元素（索引号 1）</li>
+		<li>filter() 方法允许您规定一个标准。不匹配这个标准的元素会被从集合中删除，匹配的元素会被返回。</li>
+		<li>not() 方法返回不匹配标准的所有元素。</li>
+	</ul>
+	<h2>AJAX</h2>
+	<p>AJAX = 异步 JavaScript 和 XML（Asynchronous JavaScript and XML）。简短地说，在不重载整个网页的情况下，AJAX 通过后台加载数据，并在网页上进行显示。</p>
+	<ul>
+		<li>load() 方法从服务器加载数据，并把返回的数据放入被选元素中。</li>
+		<li>$(selector).load(URL,data,callback);</li>
+		<li>必需的 URL 参数规定您希望加载的 URL。可选的 data 参数规定与请求一同发送的查询字符串键/值对集合。可选的 callback 参数是 load() 方法完成后所执行的函数名称。</li>
+		<li>$("#div1").load("/try/ajax/demo_test.txt");</li>
+		<li>$.get() 方法通过 HTTP GET 请求从服务器上请求数据。</li>
+		<li>$.get(URL,callback);</li>
+		<li>必需的 URL 参数规定您希望请求的 URL。可选的 callback 参数是请求成功后所执行的函数名。</li>
+		<li>$.post() 方法通过 HTTP POST 请求从服务器上请求数据。</li>
+		<li>$.post(URL,data,callback);</li>
+		<li>必需的 URL 参数规定您希望请求的 URL。可选的 data 参数规定连同请求发送的数据。可选的 callback 参数是请求成功后所执行的函数名。</li>
+		<li>所以get（）和post（）两种方法都是请求数据，不过方法不一样罢了...</li>
+	</ul>
+	<h2>jQuery其他</h2>
+	<ul>
+		<li>noConflict() 方法:释放会 $ 标识符的控制</li>
+		<li>由于同源策略，我们使用JSON让网页从别的域名（网站）那获取资料，即跨域读取数据</li>
+	</ul>
+	<p>至此，jQuery的基础了解已经完毕，可以开始使用它进行开发了。。然鹅我还想再看看jQueryMobile框架是什么鬼。</p>
+</body>
+</html>

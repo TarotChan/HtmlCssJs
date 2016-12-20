@@ -1,0 +1,492 @@
+<!-- 
+这是那个人写的网页，今天的任务主要就是模仿着写
+http://i.vojs.cn/ljh/plugin/vote/cover.html?vid=54101895&cid=2343 
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <title>让爱放心美人鱼：联通沃4G放心用微电影女主角选拔</title>
+    <!-- 设置css属性 -->
+    <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        body {
+            color: #666;
+            background-color: #f0f0f0;
+            font-family: 'Microsoft Yahei',Tahoma,Arial,Helvetica,Simsun,STHeiti;
+            margin: 0;
+        }
+        img {
+            display: block;
+            width: 100%;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul li a {/* 解决兼容性问题 */
+            display: flex;
+            display:-webkit-flex;
+            flex-flow: row nowrap;
+            -webkit-flex-flow: row nowrap;
+            text-align: center;
+            align-items: center;
+            -webkit-align-items: center;
+            justify-content: space-between;
+            -webkit-justify-content: space-between;
+
+            line-height: 16vw;/* vw是css3的长度单位，响应式单位，视口有100vw */
+            padding: 0 4vw;
+
+            font-size: 1.2em;
+
+        }
+        ul li a > span:nth-of-type(1) {
+            width: 12vw;
+            height: 12vw;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+
+        ul li a > span:nth-of-type(2) {
+            flex-grow: 6;
+            text-align: left;
+            margin-left: 4vw;
+        }
+
+        ul li a > span:nth-of-type(2) span {
+            color: #bbb;
+        }
+        ul li a > span:nth-of-type(3) {
+            flex-grow: 3;
+            text-align: right;
+            color: #9456ff;
+        }
+
+        ul li a > span:nth-of-type(3):after {
+            content: "票";
+        }
+
+        ul li img {
+            width: 12vw;
+        }
+
+
+        body > a {
+            display: block;
+            text-align: center;
+            line-height: 13vw;
+            /*background: -webkit-linear-gradient(top, #9456ff, #9456ff);*/
+            background: #9456ff;
+            margin: 4vw 6.5vw 2vw;
+            color: white;
+            border-bottom: 2vw solid #6f48b3;
+            border-radius: 1.2vw 1.2vw 1.5vw 1.5vw;
+            font-size: 1.3em;
+        }
+
+        /* 指定父元素的首个 p 元素的背景色 */
+        body > div:first-of-type {
+            padding-top: 45vw;
+            background: url("http://i.vojs.cn/ljh/2014new/sharepages/images/cover_01.png") top center no-repeat;
+            background-size: 100% auto;
+        } 
+        body > div:first-of-type > div {
+            background-color: white;
+            margin: 0 6.5vw;
+            border-radius: 2vw;
+            overflow: hidden;
+            box-shadow: 0 0 8px 2px rgba(0,0,0,0.2);
+        }
+        body > div:first-of-type > div > div {
+            line-height: 13vw;
+            font-size: 1.2em;
+
+            padding: 0 4vw;
+
+            display: flex;
+            display: -webkit-flex;
+
+            flex-flow: row nowrap;
+            align-items: baseline;
+            justify-content: space-between;
+            -webkit-flex-flow: row nowrap;
+            -webkit-align-items: baseline;
+            -webkit-justify-content: space-between;
+
+        }
+
+        body > div:first-of-type > div > div > span:first-of-type span {
+            color: #bbb;
+        }
+        body > div:first-of-type > div > div > span:first-of-type span::after,
+        ul li a > span:nth-of-type(2) span::after {
+            content: "号：";
+        }
+        body > div:first-of-type > div > div > span:last-of-type {
+            color: #9456ff;
+            font-size: 1.5em;
+        }
+        body > div:first-of-type > div > div > span:last-of-type::before {
+            content: "票数：";
+            font-size: 0.5em;
+            color: #bbb;
+        }
+
+        body > p {
+            margin: 5vw 6.5vw;
+            text-align: center;
+            font-size: 1em;
+            background: url('data:image/svg+xml,<svg width="2" height="40" xmlns="http://www.w3.org/2000/svg"><polyline stroke-width="1" points="0,20 2,20" stroke="#ddd" fill="none" /></svg>') center center repeat-x;
+        }
+        body > p > span {
+            background-color: #f0f0f0;
+            padding: 0 2vw;
+        }
+        body > ul {
+            padding: 0 6.5vw;
+        }
+        body > ul li.show {
+            max-height: 1000px;
+            opacity: 1;
+        }
+        body > ul li {
+            transition: opacity 0.8s;
+            -webkit-transition: opacity 0.8s;
+            max-height: 0;
+            opacity: 0;
+
+            width: 100%;
+            margin: 3vw 0;
+            border-radius: 1.5vw;
+            /*border: 1px solid #9456ff;／*/
+            border: 1px solid #c1c1c1;
+            overflow: hidden;
+            background-color: white;
+        }
+        body > ul li:nth-of-type(1) {
+            display: none;
+        }
+        body > ul li:nth-of-type(2), body > ul li:nth-of-type(3), body > ul li:nth-of-type(4), body > ul li:nth-of-type(5) {
+            border: 1px solid #9456ff;
+        }
+
+        section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            z-index: 11;
+            transition: all .7s;
+            -webkit-transition: all .7s;
+            transform: translateY(-100%);
+            -webkit-transform: translateY(-100%);
+        }
+        section.show {
+            transform: translateY(0);
+            -webkit-transform: translateY(0);
+        }
+        @keyframes loading_ani {
+            from {
+                background-size: 0;
+            }
+            to {
+                background-size: 100%;
+            }
+        }
+        @-webkit-keyframes loading_ani {
+            from {
+                background-size: 0;
+            }
+            to {
+                background-size: 100%;
+            }
+        }
+        #loading {
+            background-color: #333333;
+            position: fixed;
+            padding-top: 30vw;
+        }
+        #loading p {
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            margin: 0 auto 10px auto;
+        }
+        #loading p:empty {
+            height: 4px;
+            width: 50vw;
+            box-shadow: 0 0 1px 1px white;
+            border-radius: 2px;
+            background: url('data:image/svg+xml,<svg width="1" height="1" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" fill="white" width="1" height="1" stroke-width="0"/></svg>') repeat-y left center;
+            background-size: 100%;
+            animation: loading_ani 30s cubic-bezier(0.06, 0.68, 0.24, 1);
+            -webkit-animation: loading_ani 30s cubic-bezier(0.06, 0.68, 0.24, 1);
+        }
+        #loading p:empty.end {
+            animation: none;
+            -webkit-animation: none;
+        }
+        #loading img {
+            width: 27vw;
+            margin: 0 auto 5vw;
+        }
+        #modal {
+            position: fixed;
+            z-index: 100;
+            color: white;
+            text-align: center;
+            padding-top: 55vw;
+            font-size: 16px;
+        }
+        #modal div {
+            border: none;
+            background: white;
+            width: 45%;
+            margin: 0 auto;
+            padding: 30px 15px 30px 15px;
+            border-radius: 10px;
+            color: black;
+            box-shadow: 0 0 15px 5px rgba(0,0,0,.5);
+        }
+        #modal p {
+            color: #9456ff;
+            margin: 20px -14px -24px -14px;
+            border-top: 1px rgba(0, 0, 0, 0.2) solid;
+            padding: 7px 0 3px 0;
+        }
+        body > div:first-of-type > p {
+            text-align: center;
+            color: white;
+            margin: 3vw 0;
+            font-size: 1.8em;
+            display: none;
+        }
+
+        body > div:first-of-type > p span {
+            background-color: rgba(51, 51, 51, 0.66);
+            padding: 1vw 3vw;
+            margin: 0 2vw;
+            width: 8vw;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <p><span>00</span>:<span>00</span>:<span>00</span></p>
+    <p style="font-size: .9em;margin-bottom: 4vw;">截止时间：2016年12月8日 22:00</p>
+    <div>
+        <img src="">
+        <div><span><span></span></span><span></span></div>
+    </div>
+</div>
+<!--<img src="http://dev.vojs.cn/html/upload/default/20161202-173306-789.jpg">-->
+<a style="display: none" href="javascript:;" id="vote">给她投一票</a>
+<img style="margin-top:3vw;" src="http://i.vojs.cn/ljh/2014new/sharepages/images/cover_03.png">
+<p><span>投票规则</span></p>
+<p style="background: none;text-align: left;/* font-size: 0.8em; */line-height: 1.5em;">1. 每天每位用户投票不得超过4票（每位选手限投1票）。<br>2. 投票前4名可有机会参与联通微电影的拍摄。
+</p>
+<p><span>其他选手</span></p>
+<ul>
+    <li><a href="#1"><span><img src=""></span><span><span></span></span></span><span></span></a></li>
+</ul>
+<img src="http://i.vojs.cn/ljh/2014new/sharepages/images/cover_02.png">
+<section id="modal"><div></div><P></P></section>
+<section id="loading" class="show">
+    <p><img src="data:image/svg+xml,&lt;svg width='135px' height='126px' viewBox='0 0 135 126' version='1.1' xmlns='http://www.w3.org/2000/svg'&gt;&lt;path fill='none' stroke='white' stroke-width='2' d='M113.7,59.3 C113.7,66.1 118.1,72.7 123.3,75 C119.5,90 110.7,97.9 110.7,97.9 C110.7,97.9 111.1,110.1 106.8,116.9 C106.8,116.9 105.4,110.4 100.2,107 C100.2,107 78,124.8 46.9,117.1 C46.9,117.1 33.2,128.6 26.3,124.2 C26.3,124.2 32,117.5 30.6,110.9 C30.6,110.9 5.8,98 -0.1,69.6 C-0.1,69.6 6,79.3 12.4,74.9 C12.4,74.9 10.2,81.9 11.8,82.8 C14,84.1 21.2,87.1 24.8,80.2 C27.6,85.4 31.6,88.5 35.7,88.2 C43.1,87.6 48.2,75.9 47.1,62.1 C46.1,48.3 39.2,37.5 31.7,38.1 C31.6,38.1 31.5,38.1 31.4,38.2 C31.4,38.1 31.5,38.1 31.5,38.1 C38.5,24 52.1,12.9 71,11.4 C96.2,9.4 115.8,22.8 122.5,44.1 C117.1,46.9 113.7,52.8 113.7,59.3 L113.7,59.3 Z M69.9,41.8 C60.3,41.8 52.5,49.7 52.5,59.3 C52.5,68.9 60.3,76.8 69.9,76.8 C79.5,76.8 87.3,68.9 87.3,59.3 C87.3,49.7 79.5,41.8 69.9,41.8 L69.9,41.8 Z M102.1,84.9 C81.2,85.6 76.3,77.2 63.8,104.2 C60.7,110.8 54.7,112.2 50.3,112.4 C49.9,113.2 49.4,113.9 48.9,114.7 C51.7,115.7 56.8,116.4 65.9,115.7 C83.7,114.3 99,106.5 109.6,94.7 C125.6,76.9 118.4,84.3 102.1,84.9 L102.1,84.9 Z M37.8,15.2 C37.8,15.2 33,10.3 31.9,9.3 C29.8,7.2 29.8,3.8 32,1.7 C34.1,-0.3 37.5,-0.3 39.6,1.8 C41.7,3.9 41.7,7.2 39.5,9.3 C37.2,11.6 37.8,15.2 37.8,15.2 L37.8,15.2 Z M26.7,20 C23.4,23.3 18.2,23.2 15,20 C11.7,16.7 11.8,11.4 15,8.2 C18.3,5 23.5,5 26.7,8.3 C28.3,9.9 35.8,17.4 35.8,17.4 C35.8,17.4 30.7,16 26.7,20 L26.7,20 Z'&gt;&lt;/path&gt;&lt;path d='M127.6,76.6 C125.8,80.4 123.2,83 120.3,83.8 C120.4,83.6 120.5,83.4 120.6,83.1 C126.2,79.9 129.7,69.8 128.7,58.1 C127.9,48 124,39.5 119.1,35.9 C118.8,35.4 118.6,34.9 118.3,34.4 C120.8,35.4 123.1,37.5 125,40.5 C129.4,42.4 133,49.3 133.7,57.9 C134.4,66.7 131.8,74.2 127.6,76.6 L127.6,76.6 Z M74.5,66.4 C71,66.6 67.9,64 67.6,60.4 C67.5,59.8 67.6,59.1 67.7,58.5 C68.2,59.7 69.4,60.5 70.8,60.5 C72.6,60.5 74.1,59 74.1,57.2 C74.1,55.6 73,54.3 71.5,54 C72.1,53.7 72.8,53.6 73.5,53.5 C77,53.2 80.1,55.9 80.4,59.4 C80.7,63 78,66.1 74.5,66.4 L74.5,66.4 Z M30.6,83.6 C30.4,83.6 30.2,83.6 29.9,83.6 C35.5,82.5 39.2,73.4 38.4,62.6 C37.5,51.8 32.4,43.3 26.7,43.1 C26.9,43.1 27.2,43.1 27.4,43 C33.3,42.6 38.8,51.3 39.7,62.5 C40.6,73.7 36.5,83.2 30.6,83.6 L30.6,83.6 Z M22.9,45.5 C23.6,45.2 24.3,45 25,44.9 C30.5,44.5 35.6,52.5 36.4,62.7 C37.2,73 33.4,81.7 28,82.2 C22.5,82.6 17.4,74.6 16.6,64.3 C15.9,56.1 18.2,48.8 22,46.1 C9.8,33.9 27.3,31.7 35.4,31.4 C35.3,31.5 35.2,31.7 35.1,31.8 C25.2,34 23.3,42.2 22.9,45.5 L22.9,45.5 Z M118.5,60.5 C119.5,60.5 120.3,59.7 120.3,58.7 C120.3,57.7 119.5,56.9 118.5,56.9 C118.4,56.9 118.2,56.9 118.1,56.9 C118.6,56.5 119.1,56.2 119.8,56.1 C121.6,56 123.2,57.9 123.4,60.4 C123.6,62.9 122.3,65.1 120.5,65.3 C118.7,65.4 117,63.5 116.8,61 C116.8,60.5 116.8,60 116.9,59.5 C117.2,60.1 117.8,60.5 118.5,60.5 L118.5,60.5 Z' fill='none' stroke='white' stroke-width='2' &gt;&lt;/path&gt;&lt;/svg&gt;" width="100%"></p>
+    <p></p>
+</section>
+<script src="http://i.vojs.cn/ljh/jhutils/wxshare.js"></script>
+<script>
+    (function() {
+      var add0, p, sub;
+      sub = new Date((new Date("2016/12/08 22:00:00")) - (new Date()));
+      if (sub < 1000) {
+        return;
+      }
+      p = document.body.firstElementChild.firstElementChild;
+      add0 = function(i) {
+        if (i < 10) {
+          return "0" + i;
+        } else {
+          return i;
+        }
+      };
+      return window.int = setInterval(function() {
+        if (sub <= 0) {
+          clearInterval(int);
+        }
+        p.children[0].innerText = add0(sub.getUTCHours());
+        p.children[1].innerText = add0(sub.getUTCMinutes());
+        p.children[2].innerText = add0(sub.getUTCSeconds());
+        return sub.setTime(sub.getTime() - 1000);
+      }, 1000);
+    })();
+    (function() {
+        var _, cid, config, detail, empty_func, error, jsonp, li_show, modal, vid;
+
+        _ = function(id) {
+            return document.querySelector(id);
+        };
+
+        detail = {
+            _self: _("body > div:first-of-type > div:first-of-type"),
+            _modal: _("#modal"),
+            old_li: _("li:first-of-type"),
+            ul: _("ul"),
+            count: _("body > div > div > div > span:last-of-type")
+        };
+
+        empty_func = function() {};
+
+        modal = {
+            show: function(text) {
+                detail._modal.innerHTML = "<div>" + text + "</div>";
+                return detail._modal.className = "show";
+            },
+            hide: function() {
+                return detail._modal.className = "";
+            },
+            alert: function(text) {
+                detail._modal.innerHTML = "<div>" + text + "<p>我知道了</p></div>";
+                detail._modal.className = "show";
+                return detail._modal.firstElementChild.onclick = function() {
+                    this.onclick = empty_func;
+                    return detail._modal.className = "";
+                };
+            },
+            jump: function(text, url) {
+                detail._modal.innerHTML = "<div>" + text + "<p>我知道了</p></div>";
+                detail._modal.className = "show";
+                return detail._modal.firstElementChild.onclick = function() {
+                    this.onclick = empty_func;
+                    return location.href = url;
+                };
+            }
+        };
+
+        config = {
+            domain: "http://plugin.vojs.tv/index.php/plugin"
+        };
+
+        try {
+            vid = (location.search.match(/vid=(\d+)/))[1];
+            cid = (location.search.match(/cid=(\d+)/))[1];
+        } catch (error) {
+            modal.show("未找到投票");
+            return;
+        }
+
+        jsonp = function(url) {
+            var script;
+            script = document.createElement("script");
+            script.src = url;
+            return document.body.appendChild(script);
+        };
+
+        li_show = function(li) {
+            detail._self.firstElementChild.src = li.querySelector("img").src = li.querySelector("img").getAttribute("data-src");
+            detail._self.lastElementChild.firstElementChild.innerHTML = li.querySelector("span:nth-of-type(2)").innerHTML;
+            return detail._self.lastElementChild.lastElementChild.innerHTML = li.querySelector("span:nth-of-type(3)").innerHTML;
+        };
+
+        window.onscroll = function() {
+            var i, img, len, li, ref1;
+            ref1 = detail.ul.querySelectorAll("li:not(:first-of-type):not(.show)");
+            for (i = 0, len = ref1.length; i < len; i++) {
+                li = ref1[i];
+                if (li.getBoundingClientRect().top < 900) {
+                    img = li.querySelector("img");
+                    img.src = img.getAttribute("data-src");
+                    li.className = "show";
+                } else {
+                    return;
+                }
+            }
+        };
+
+        window.get_vote_cb = function(vote) {
+            var choice, fs, i, len, newli, ref, ref1;
+            vote = vote.text;
+            if (vote["title"] == null) {
+                modal.alert("未找到投票");
+                return;
+            }
+            document.title = vote.title;
+            jhUtils.setWxShare({
+                title: vote.share_title,
+                desc: vote.share_text,
+                link: "http://cloud.wx.vojs.tv/oauth/index.html?redirect_uri=http%3A%2F%2Fplugin.vojs.tv%2Findex.php%2Fplugin%2Fucenter%2Flogin%3Fredirect%3Dhttp%253A%252F%252Fi.vojs.cn%252Fljh%252Fplugin%252Fvote%252Fcover.html%253Fvid%253D" + vid + "%2526cid%253D" + cid + "&response_type=code&scope=snsapi_userinfo&state=2232&iscode=1#wechat_redirect",
+                imgUrl: vote.share_icon
+            });
+            ref1 = vote.choices;
+            for (i = 0, len = ref1.length; i < len; i++) {
+                choice = ref1[i];
+                newli = detail.old_li.cloneNode(1);
+                fs = newli.firstElementChild.firstElementChild;
+                newli.setAttribute("title", choice.id);
+                newli.firstElementChild.href = "cover.html?vid=" + vid + "&cid=" + choice.id;
+                fs.firstElementChild.setAttribute("data-src", choice.image);
+                fs.nextElementSibling.innerHTML = ("<span>" + choice.title + "</span>") + choice.description.split(" - ")[0];
+                fs.nextElementSibling.nextElementSibling.innerHTML = choice.count;
+                detail.ul.appendChild(newli);
+            }
+            window.onscroll();
+            if ((ref = _("li[title='" + cid + "']")) != null) {
+                li_show(ref);
+            } else {
+                modal.show("未找到投票及选项");
+                return;
+            }
+            return _("#loading").className = "";
+        };
+
+        _("#vote").onclick = function() {
+            modal.show("正在投票,请稍候...");
+            return jsonp(config.domain + "/vote/vote_for_choice?q=%7B%22callback%22%3A%22vote_cb%22%2C%22choice_id%22%3A%22" + cid + "%22%7D&" + (Math.random()));
+        };
+
+        window.vote_cb = function(result) {
+            var result_text, resultid;
+            if (result.code === "899") {
+                return modal.alert("请登录");
+            } else if (result.code === "000") {
+                result_text = ["投票成功，谢谢您的参与", "您今天已经为这位选手投过票了哦", "您今天的投票机会已经用光啦", "您已经为这位选手投过票了哦", "您的投票机会已经用光啦", "找不到这个选项", "找不到这个投票", "", "投票还没开始，请耐心等待", "投票已经结束，感谢您的关注"];
+                resultid = result.text[0].resultid;
+                switch (resultid) {
+                    case "0":
+                        modal.alert(result_text[resultid]);
+                        return _("li[title='" + cid + "'] > a > span:last-of-type").innerText = (detail.count.innerText = ~~detail.count.innerText + 1);
+                    case "1":
+                    case "2":
+                    case "3":
+                    case "4":
+                    case "5":
+                    case "6":
+                    case "8":
+                    case "9":
+                        return modal.alert(result_text[resultid]);
+                    default:
+                        return modal.alert("未知错误");
+                }
+            }
+        };
+
+        jsonp(config.domain + "/vote/get_vote_visitor?q=%7B%22vote_id%22%3A%22" + vid + "%22%2C%20%22callback%22%3A%22get_vote_cb%22%7D");
+
+    }).call(this);
+
+</script>
+</body>
+</html>

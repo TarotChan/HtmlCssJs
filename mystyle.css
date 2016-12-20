@@ -1,0 +1,105 @@
+.nav1 > li{
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	border: 1px solid #000;
+	width: 200px;
+}
+/* 把display改成inline-block以后就不需要再改list-style了，padding似乎也是内置的0px.
+一级菜单设置完毕。
+ */
+.nav2{
+	position: absolute;
+	visibility: hidden;
+	width: 160px;
+	background: #CCC;
+}
+.nav1 > li:hover{
+	background-color: #000;
+	color: #FFF;
+}
+.nav1 > li:hover > .nav2{
+	visibility: visible;
+	color: #000;
+}
+.nav2 > li{
+	list-style: none;
+	text-align: center;
+	margin-left: -40px;
+}
+.nav2 > li:hover{
+	background-color: #000;
+	color: #FFF;
+}
+.nav2 > li:hover > a{
+	color: #FFF;
+}
+.nav3{
+	position: absolute;
+	visibility: hidden;
+	width: 200px;
+	left: 160px;
+}
+.nav2 > li:hover > .nav3{
+	visibility: visible;
+}
+.nav3 > li{
+	list-style: none;
+	text-align: center;
+	background-color: #FCC;
+}
+.nav3 > li:hover{
+	background-color: #CFC;
+}
+.nav4{
+	position: absolute;
+	visibility: hidden;
+	width: 200px;
+	left: 200px;
+}
+.nav3 > li:hover > .nav4{
+	visibility: visible;
+}
+.nav4 > li{
+	list-style: none;
+	text-align: center;
+	background-color: #FCC;
+}
+.nav4 > li:hover{
+	background-color: #CCC;
+}
+.nav{
+	position: fixed;
+	right: 50px;top: 20%;
+	border: 1px solid #000;
+	background-color: #CFC;
+	background: #CCC;
+}
+.nav > li{
+	list-style: none;
+	margin-left: -40px;
+	padding: 10px 30px;
+	text-align: center;
+}
+.nav > li:hover{
+	background-color: #000;
+	color: #FFF;
+}
+.header{
+	background: #CCC;
+}
+.main1{
+	background: #FCC;
+}
+.main2{
+	background: #CCF;
+}
+.main3{
+	background: #CFC;
+}
+.main4{
+	background: #CCF;
+}
+.main5{
+	background: #FCC;
+}
