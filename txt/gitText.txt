@@ -19,3 +19,13 @@ error: failed to push some refs to 'git@github.com:yangchao0718/cocos2d.git
 这个问题主要是出在本地没有README.md文档的备份，只要先使用
 git pull --rebase origin master 进行文档合并，
 再执行语句 git push -u origin master即可完成代码上传到github
+
+remote origin already exists.
+解决这个问题是要删掉.git文件夹中config文件内的[remote "origin"]子串，把那一行删掉就可以了。
+当然.git文件夹是隐藏的，我们必须在文件夹的查看菜单中把隐藏的项目勾选出来，就可以看到.git文件夹，打开以后就能看到config文件了。
+
+还有上传的步奏：
+1：git add .  // 上传所有文件
+2：git commit -m "commit message"  //备注信息
+3：git remote add origin git@github.com:TarotChan/test.git
+4：git push -u origin master
