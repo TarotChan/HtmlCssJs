@@ -29,3 +29,7 @@ remote origin already exists.
 2：git commit -m "commit message"  //备注信息
 3：git remote add origin git@github.com:TarotChan/test.git
 4：git push -u origin master
+
+我发现了那个错误就是子虚乌有的...因为你第一次上传的时候，就已经设置了
+git remote add origin git@github.com:TarotChan/test.git
+所以现在只需要添加文件，提交更改信息，最后上传，就行了。所以说这是根本不会错在的错误..

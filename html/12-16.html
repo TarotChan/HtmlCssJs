@@ -3,175 +3,61 @@
 <html>
 <head>
 	<title>12-16</title>
-	<link href="mystyle.css" rel="stylesheet" />
+	<link href="../css/mystyle.css" rel="stylesheet" />
 </head>
 <body>
   <!-- banner -->
   <div class="header" id="top">
     <h1>前言</h1>
     <p>今天的任务主要是熟悉属性...首先我们对各种属性进行一个大致的分类：</p>
-  <!-- /banner -->
-  <!-- tab nav -->
-  <ul class="nav1">
-    <li><a href="#tip1">显示属性</a>
-      <ul class="nav2">
-        <li><a href="#">display</a></li>
-        <li><a href="#">float</a></li>
-        <li><a href="#">list-style</a>
-          <ul class="nav3">
-            <li>list-style-image</li>
-            <li>list-style-position</li>
-            <li>list-style-type</li>
-          </ul>
-        </li>
-        <li><a href="#">position</a></li>
-        <li><a href="#">top, right, bottom, left</a></li>
-        <li><a href="#">clip</a></li>
-        <li><a href="#">max-width/max-height, min-width/min-height</a></li>
-        <li><a href="#">overflow</a></li>
-        <li><a href="#">clear</a></li>
-        <li><a href="#">visibility</a></li>
-        <li><a href="#">z-index</a></li>
-      </ul>
-    </li>
-    <li><a href="#tip2">自身属性</a>
-      <ul class="nav2">
-        <li><a href="#">width</a></li>
-        <li><a href="#">height</a></li>
-        <li><a href="#">background</a>
-          <ul class="nav3">
-            <li>background-attachment</li>
-            <li>background-color</li>
-            <li>background-image</li>
-            <li>background-position</li>
-            <li>background-repeat</li>
-          </ul>
-        </li>
-        <li><a href="#">padding</a>
-          <ul class="nav3">
-            <li>padding-bottom</li>
-            <li>padding-left</li>
-            <li>padding-right</li>
-            <li>padding-top</li>
-          </ul>
-        </li>
-        <li><a href="#">border</a>
-          <ul class="nav3">
-            <li>border-color</li>
-            <li>border-style</li>
-            <li>border-width</li>
-            <li>border-bottom
-              <ul class="nav4">
-                <li>border-bottom-color</li>
-                <li>border-bottom-style</li>
-                <li>border-bottom-width</li>
-              </ul>
-            </li>
-            <li>border-left
-              <ul class="nav4">
-                <li>border-left-color</li>
-                <li>border-left-style</li>
-                <li>border-left-width</li>
-              </ul>
-            </li>
-            <li>border-right
-              <ul class="nav4">
-                <li>border-right-color</li>
-                <li>border-right-style</li>
-                <li>border-right-width</li>
-              </ul>
-            </li>
-            <li>border-top
-              <ul class="nav4">
-                <li>border-top-color</li>
-                <li>border-top-style</li>
-                <li>border-top-width</li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#">matgin</a>
-          <ul class="nav3">
-            <li>matgin-bottom</li>
-            <li>margin-left</li>
-            <li>margin-right</li>
-            <li>margin-top</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#tip3">文本属性</a>
-      <ul class="nav2">
-        <li>color</li>
-        <li>content</li>
-        <li>counter-increment</li>
-        <li>counter-reset</li>
-        <li>font
-          <ul class="nav3">
-            <li>font-family</li>
-            <li>font-size</li>
-            <li>font-style</li>
-            <li>font-variant</li>
-            <li>font-weight</li>
-          </ul>
-        </li>
-        <li>line-height</li>
-        <li>text-align</li>
-        <li>text-decoration</li>
-        <li>text-indent</li>
-        <li>text-transform</li>
-        <li>vertical-alingn</li>
-        <li>white-space</li>
-        <li>letter-spacing</li>
-        <li>word-spacing</li>
-      </ul>
-    </li>
-    <li><a href="#tip4">选择器</a>
-      <ul class="nav2">
-        <li>通配选择器</li>
-        <li>类型选择器：element1</li>
-        <li>后代选择器：element1 element2</li>
-        <li>子选择器：element1 > element2</li>
-        <li>相邻兄弟选择器：element1 + element2</li>
-        <li>类选择器：element1.element2</li>
-        <li>ID选择器：element1#element2</li>
-        <li>简单属性选择器：element1[attr]</li>
-        <li>具体属性选择器：element1[attr="value"]</li>
-        <li>部分属性选择器：element1[attr~="value"]</li>
-        <li>开始子串属性选择器：element1[attr^="substring"]</li>
-        <li>结束子串属性选择器：element1[attr$="substring"]</li>
-        <li>任意子串属性选择器：element1[attr*="substring"]</li>
-        <li>语言属性选择器：element1[lang|="lc"]</li>
-      </ul>
-    </li>
-    <li><a href="#tip5">伪类和伪元素</a>
-      <ul class="nav2">
-        <li>伪类
-          <ul class="nav3">
-            <li>激活中的伪类:active</li>
-            <li>另一个元素的第一子元素:first-child</li>
-            <li>焦点:focus</li>
-            <li>悬停:hover</li>
-            <li>语言:lang</li>
-            <li>未访问过的链接:link</li>
-            <li>访问过的链接:visited</li>
-          </ul>
-        </li>
-        <li>伪元素
-          <ul class="nav3">
-            <li>元素后:after</li>
-            <li>元素前:before</li>
-            <li>首字母:first-letter</li>
-            <li>首行:first-line</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul></div>
+    <!-- /banner -->
+    <!-- tab nav -->
+    <ul class="nav1">
+      <li><a href="#tip1">显示属性</a>
+        <ul class="nav2">
+          <li><a href="#display">display</a></li>
+          <li><a href="#float">float</a></li>
+          <li><a href="#list-style">list-style</a></li>
+          <li><a href="#position">position</a></li>
+          <li><a href="#clear">clear</a></li>
+          <li><a href="#visibility">visibility</a></li>
+          <li><a href="#z-index">z-index</a></li>
+        </ul>
+      </li>
+      <li><a href="#tip2">自身属性</a>
+        <ul class="nav2">
+          <li><a href="#width">width</a></li>
+          <li><a href="#height">height</a></li>
+          <li><a href="#background">background</a></li>
+          <li><a href="#padding">padding</a></li>
+          <li><a href="#border">border</a></li>
+          <li><a href="#margin">margin</a></li>
+        </ul>
+      </li>
+      <li><a href="#tip3">文本属性</a>
+        <ul class="nav2">
+          <li><a href="#color">color</a></li>
+          <li><a href="#font">font</a></li>
+          <li><a href="#line-height">line-height</a></li>
+          <li><a href="#text-align">text-align</a></li>
+          <li><a href="#text-decoration">text-decoration</a></li>
+          <li><a href="#text-indent">text-indent</a></li>
+          <li><a href="#text-transform">text-transform</a></li>
+          <li><a href="#vertical-align">vertical-align</a></li>
+          <li><a href="#white-space">white-space</a></li>
+          <li><a href="#letter-spacing">letter-spacing</a></li>
+          <li><a href="#word-spacing">word-spacing</a></li>
+        </ul>
+      </li>
+      <li><a href="#tip4">选择器</a></li>
+      <li><a href="#tip5">伪类和伪元素</a></li>
+    </ul>
+  </div>
   <!-- /tab nav -->
   <div class="main1">
   <a id="tip1"></a>
   <h2>显示属性</h2>
+  <a id="display"></a>
   <h3>display</h3>
   <p><strong>初始值：</strong>视元素而定</p>
   <p><strong>值：</strong></p>
@@ -206,6 +92,7 @@
     </li>
     <li>list-item：display 为 list-item 的元素可以设置表样式 list-style </li>
   </ul>
+  <a id="list-style"></a>
   <h3>list-style</h3>
   <p><strong>初始值：</strong>相对于各属性</p>
   <p><strong>值：</strong></p>
@@ -275,6 +162,7 @@
       </ul>
     </li>
   </ul>
+  <a id="position"></a>
   <h3>position</h3>
   <p><strong>初始值：</strong>static</p>
   <p><strong>值：</strong></p>
@@ -354,6 +242,7 @@
     <li>用于<strong>绝对定位元素</strong></li>
     <li>rect()表示的不是边偏移，而是距元素左上角的距离，仅接受长度值和 auto </li>
   </ul>
+  <a id="visibility"></a>
   <h3>visibility</h3>
   <p><strong>初始值：</strong>visible</p>
   <p><strong>值：</strong></p>
@@ -368,6 +257,7 @@
   <ul>
     <li>用于<strong>所有元素</strong></li>
   </ul>
+  <a id="z-index"></a>
   <h3>z-index</h3>
   <p><strong>初始值：</strong>auto</p>
   <p><strong>值：</strong></p>
@@ -382,6 +272,7 @@
     <li>用于<strong>定位元素</strong></li>
     <li>显示的优先级</li>
   </ul>
+  <a id="float"></a>
   <h3>float</h3>
   <p><strong>初始值：</strong>none</p>
   <P><strong>值：</strong></P>
@@ -398,6 +289,7 @@
     <li> left 和 right 表示向左浮动或向右浮动， none 表示不浮动</li>
     <li>首先，浮动会从正常的文档流删除</li>
   </ul>
+  <a id="clear"></a>
   <h3>clear</h3>
   <p><strong>初始值：</strong>none</p>
   <p><strong>值：</strong></p>
@@ -418,6 +310,7 @@
   <div class="main2">
   <a id="tip2"></a>
   <h2>自身属性</h2>
+  <a id="width"></a>
   <h3>width</h3>
   <p><strong>初始值：</strong>auto</p>
   <p><strong>值：</strong></p>
@@ -433,6 +326,7 @@
     <li>用于<strong>块级元素和替换元素</strong></li>
     <li>百分数相对于包含块的 width </li>
   </ul>
+  <a id="height"></a>
   <h3>height</h3>
   <p><strong>初始值：</strong>auto</p>
   <p><strong>值：</strong></p>
@@ -448,6 +342,7 @@
     <li>用于<strong>块级元素和替换元素</strong></li>
     <li>百分数相对于包含块的 height </li>
   </ul>
+  <a id="padding"></a>
   <h3>padding</h3>
   <p><strong>初始值：</strong>未定义</p>
   <p><strong>值：</strong></p>
@@ -465,6 +360,7 @@
     <li>可以更改元素的单边内边距：padding-top, padding-right, padding-bottom, padding-left</li>
     <li>对于行内元素，默认的 padding-left 和 padding-right 会显示， padding-top 和 padding-bottom 不会显示，但当为其填充颜色时会覆盖原有区域</li>
   </ul>
+  <a id="border"></a>
   <h3>border</h3>
   <p><strong>初始值：</strong>根据单个属性</p>
   <p><strong>值：</strong></p>
@@ -549,6 +445,7 @@
       </ul>
     </li>
   </ul>
+  <a id="margin"></a>
   <h3>margin</h3>
   <p><strong>初始值：</strong>未定义</p>
   <p><strong>值：</strong></p>
@@ -569,6 +466,7 @@
     <li>外边距是透明的，背景只会衍生到内边距</li>
     <li>左右外边距对行内元素是有影响的</li>
   </ul>
+  <a id="background"></a>
   <h3>background</h3>
   <p><strong>初始值：</strong>根据各个属性</p>
   <p><strong>值：</strong></p>
@@ -647,6 +545,7 @@
   <div class="main3">
   <a id="tip3"></a>
   <h2>文本属性</h2>
+  <a id="color"></a>
   <h3>color</h3>
   <p><strong>初始值：</strong>用户代理特定</p>
   <p><strong>值：</strong></p>
@@ -661,6 +560,7 @@
     <li>color可以设置元素的前景色，可以让子元素继承从而影响到边框，表单元素等</li>
     <li><a href="css颜色小试.html">css颜色小试</a></li>
   </ul>
+  <a id="font"></a>
   <h3>font</h3>
   <p><strong>初始值：</strong>根据单个属性</p>
   <p><strong>值：</strong></p>
@@ -742,6 +642,7 @@
       </ul>
     </li>
   </ul>
+  <a id="text-indent"></a>
   <h3>text-indent</h3>
   <p><strong>初始值：</strong>0</p>
   <p><strong>值：</strong></p>
@@ -757,6 +658,7 @@
     <li>缩进</li>
     <li>可设置为负值</li>
   </ul>
+  <a id="text-align"></a>
   <h3>text-align</h3>
   <p><strong>初始值：</strong>用户代理特定</p>
   <p><strong>值：</strong></p>
@@ -773,6 +675,7 @@
     <li>应用于<strong>块级元素</strong></li>
     <li>justify是两端对齐</li>
   </ul>
+  <a id="line-height"></a>
   <h3>line-height</h3>
   <p><strong>初始值：</strong>normal</p>
   <P><strong>值：</strong></P>
@@ -785,6 +688,7 @@
     <li>应用于<strong>所有元素</strong></li>
     <li>行间距就是line-height减去font-size的值的一半</li>
   </ul>
+  <a id="vertical-align"></a>
   <h3>vertical-align</h3>
   <p><strong>初始值：</strong>baseline</p>
   <p><strong>值：</strong></p>
@@ -802,6 +706,7 @@
     <li>百分数参数根据其父元素的line-height计算，正（负）百分比使其基线相对于父元素基线升高（下降）</li>
     <li>所有的垂直对齐都会影响行高</li>
   </ul>
+  <a id="word-spacing"></a>
   <h3>word-spacing</h3>
   <p><strong>初始值：</strong>normal</p>
   <p><strong>值：</strong></p>
@@ -816,6 +721,7 @@
     <li>设置normal与设置0的效果是一样的</li>
     <li>会受 text-align: justify 影响</li>
   </ul>
+  <a id="letter-spacing"></a>
   <h3>letter-spacing</h3>
   <p><strong>初始值：</strong>normal</p>
   <p><strong>值：</strong></p>
@@ -829,6 +735,7 @@
     <li>字母间隔</li>
     <li>设置normal与设置0的效果是一样的。</li>
   </ul>
+  <a id="text-transform"></a>
   <h3>text-transform</h3>
   <p><strong>初始值：</strong>none</p>
   <p><strong>值：</strong></p>
@@ -843,6 +750,7 @@
     <li>uppercase/lowercase使文本全部转换为大写/小写</li>
     <li>capitalize对每个单词的首字母大写</li>
   </ul>
+  <a id="text-decoration"></a>
   <h3>text-decoration</h3>
   <p><strong>初始值：</strong>none</p>
   <p><strong>值：</strong></p>
@@ -870,6 +778,7 @@
     <li>应用于<strong>所有元素</strong></li>
     <li>需要提供阴影颜色，第一二个数字是必须的，他提供了阴影的水平和垂直的偏移距离，第三个是可选的，他设置了阴影的模糊半径。</li>
   </ul>
+  <a id="white-space"></a>
   <h3>white-space</h3>
   <p><strong>初始值：</strong>normal</p>
   <p><strong>值：</strong></p>
@@ -885,6 +794,7 @@
   </div>
   <div class="main4">
     <a id="tip4"></a>
+    <h2>选择器</h2>
     <ul>
       <li>通配选择器：*</li>
       <li>类型选择器：element1</li>
@@ -904,6 +814,7 @@
   </div>
   <div class="main5">
     <a id="tip5"></a>
+    <h2>伪类和伪元素</h2>
     <ul>
       <li>伪类
         <ul>
@@ -926,15 +837,49 @@
       </li>
     </ul>
   </div>
-  <ul class="nav">
-    <li><a href="#tip1">显示属性</a></li>
-    <li><a href="#tip2">自身属性</a></li>
-    <li><a href="#tip3">文本属性</a></li>
-    <li><a href="#tip4">选择器</a></li>
-    <li><a href="#tip5">伪类和伪元素</a></li>
-    <li>---</li>
-    <li>---</li>
-    <li><a href="#top">返回顶部</a></li>
-  </ul>
+  <div class="nav">
+    <ul class="nav1">
+      <li><a href="#tip1">显示属性</a>
+        <ul class="nav2">
+          <li><a href="#display">display</a></li>
+          <li><a href="#float">float</a></li>
+          <li><a href="#list-style">list-style</a></li>
+          <li><a href="#position">position</a></li>
+          <li><a href="#clear">clear</a></li>
+          <li><a href="#visibility">visibility</a></li>
+          <li><a href="#z-index">z-index</a></li>
+       </ul>
+      </li>
+      <li><a href="#tip2">自身属性</a>
+        <ul class="nav2">
+          <li><a href="#width">width</a></li>
+          <li><a href="#height">height</a></li>
+          <li><a href="#background">background</a></li>
+          <li><a href="#padding">padding</a></li>
+          <li><a href="#border">border</a></li>
+          <li><a href="#margin">margin</a></li>
+        </ul>
+      </li>
+      <li><a href="#tip3">文本属性</a>
+        <ul class="nav2">
+          <li><a href="#color">color</a></li>
+          <li><a href="#font">font</a></li>
+          <li><a href="#line-height">line-height</a></li>
+          <li><a href="#text-align">text-align</a></li>
+          <li><a href="#text-decoration">text-decoration</a></li>
+          <li><a href="#text-indent">text-indent</a></li>
+          <li><a href="#text-transform">text-transform</a></li>
+          <li><a href="#vertical-align">vertical-align</a></li>
+          <li><a href="#white-space">white-space</a></li>
+          <li><a href="#letter-spacing">letter-spacing</a></li>
+          <li><a href="#word-spacing">word-spacing</a></li>
+        </ul>
+      </li>
+      <li><a href="#tip4">选择器</a></li>
+      <li><a href="#tip5">伪类和伪元素</a></li>
+      <li>--</li>
+      <li><a href="#top">返回顶部</a></li>
+    </ul>
+  </div>
 </body>
 </html>

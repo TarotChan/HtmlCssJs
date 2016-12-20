@@ -1,105 +1,82 @@
-.nav1 > li{
-	display: inline-block;
-	vertical-align: top;
-	text-align: center;
-	border: 1px solid #000;
-	width: 200px;
+body{
+	background-color: #FFC;
 }
-/* 把display改成inline-block以后就不需要再改list-style了，padding似乎也是内置的0px.
-一级菜单设置完毕。
- */
-.nav2{
-	position: absolute;
-	visibility: hidden;
-	width: 160px;
-	background: #CCC;
-}
-.nav1 > li:hover{
-	background-color: #000;
+.header{
+	background-color: #669;
 	color: #FFF;
 }
-.nav1 > li:hover > .nav2{
-	visibility: visible;
-	color: #000;
-}
-.nav2 > li{
-	list-style: none;
+.header a, .nav a{
+	display: inline-block;
+	width: 160px;
+	text-decoration: none;
 	text-align: center;
+	font: 15px cursive;
+	color: #FFF;
+	letter-spacing: 1px;
+}
+.header li, .nav li{
 	margin-left: -40px;
 }
-.nav2 > li:hover{
-	background-color: #000;
-	color: #FFF;
+.header > .nav1 > li{
+	display: inline-block;
+	position: relative;
+	margin: 0px 10px;
+	padding: 10px 0px;
+	vertical-align: top;
+	background-color: #39C;
 }
-.nav2 > li:hover > a{
-	color: #FFF;
-}
-.nav3{
+.header > .nav1 > li > .nav2{
+	list-style: none;
 	position: absolute;
 	visibility: hidden;
-	width: 200px;
-	left: 160px;
-}
-.nav2 > li:hover > .nav3{
-	visibility: visible;
-}
-.nav3 > li{
-	list-style: none;
+	background-color: #66F;
 	text-align: center;
-	background-color: #FCC;
-}
-.nav3 > li:hover{
-	background-color: #CFC;
-}
-.nav4{
-	position: absolute;
-	visibility: hidden;
-	width: 200px;
-	left: 200px;
-}
-.nav3 > li:hover > .nav4{
-	visibility: visible;
-}
-.nav4 > li{
-	list-style: none;
-	text-align: center;
-	background-color: #FCC;
-}
-.nav4 > li:hover{
-	background-color: #CCC;
 }
 .nav{
 	position: fixed;
-	right: 50px;top: 20%;
-	border: 1px solid #000;
-	background-color: #CFC;
-	background: #CCC;
+	top: 30%;right: 50px;
 }
-.nav > li{
-	list-style: none;
-	margin-left: -40px;
-	padding: 10px 30px;
+.nav > .nav1 > li{
+	display: block;
+	position: relative;
+	padding: 10px 0px;
+	background-color: #39C;
 	text-align: center;
 }
-.nav > li:hover{
-	background-color: #000;
+.nav > .nav1 > li > .nav2{
+	list-style: none;
+	position: absolute;
+	visibility: hidden;
+	margin: -30px -160px;
+	background-color: #66F;
+	text-align: center;
+}
+.nav1 > li:hover > .nav2{
+	visibility: visible;
+}
+.nav1 > li:hover{
+	background-color: #66F;
+}
+.nav2 > li:hover{
+	background-color: #39C;
+	border-bottom: 1px solid #CCC;
+	font-size: 25px;
+}
+h2{
+	background-color: #669;
 	color: #FFF;
+	border: 2px solid #AAA;
+	border-left: none;
+	border-right: none;
+
+	font-size: 40px;
 }
-.header{
-	background: #CCC;
-}
-.main1{
-	background: #FCC;
-}
-.main2{
-	background: #CCF;
-}
-.main3{
-	background: #CFC;
-}
-.main4{
-	background: #CCF;
-}
-.main5{
-	background: #FCC;
+h3{
+	background-color: #09C;
+	color: #FFF;
+	border: 2px solid #CCC;
+	border-left: none;
+	border-right: none;
+	text-align: center;
+	font-size: 30px;
 }
