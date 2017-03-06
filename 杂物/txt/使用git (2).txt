@@ -1,0 +1,195 @@
+一、首先设置账户名和邮箱（和GitHub保持一致）
+
+1.$ Git config --global user.name "Your Name" //设置账户名
+
+2.$ git config --global user.email "email@example.com" //设置邮箱
+
+ 
+
+二、创建本地仓库（例如我在G盘创建一个本地仓库）
+
+1.首先在桌面打开Git Bash
+
+2.$ cd G: //打开G盘，也可以直接在G盘中打开Git Bash
+
+3.$ mkdir GitProject //在G盘通过mkdir创建GitProject仓库（Git不可管理仓库）
+
+4.$ cd GitProject //在G盘下进入GitProject仓库
+
+5.pwd //显示当前仓库目录（会出现/g/Java）
+
+6.git init //把GitProject变成Git可管理的仓库
+
+ 
+
+三、本地机器关联GitHub（SSH Key）
+
+1.创建SSH Key，用于本地Git仓库和GitHub仓库之间的加密，或者说传输的钥匙
+
+2.$ ssh-keygen -t rsa -C "4******7@qq.com"  在C盘下创建.ssh文件夹，里面有id_rsa和id_rsa.pub两个文件,SSH Key放在这里 面（和你的Git是否安装在C盘没有关联），目录在用户下面。
+
+3.登陆GitHub，打开“settings”->“SSH Keys”页面
+
+4.点“Add SSH Key”，填上任意Title，在Key文本框里把.ssh目录下id_rsa.pub文件拖拽进来，复制全部代码，返回黏贴到Key文本框中，点击ADD添加
+
+ 
+
+ 
+
+四、本地仓库关联到远程仓库
+
+1.登陆GitHub，然后，在右上角找到“Create a new repo”按钮，创建一个远程仓库
+
+2.在Repository name填入一个随便的仓库名称，当然最好是你的项目名称，其他保持默认设置，点击“Create repository”按钮，就成功地创建了一个新的Git仓库
+
+3.远程仓库创建好以后，会出现如下提示
+
+git init
+
+git add README.md
+
+git commit -m "first commit"
+
+git remote add origin https://github.com/re512/c++.git
+
+git push -u origin master
+
+4.在本地仓库内右击选择Git Bash，打开Git Bash我们按着提示来，但是要在git init后加入touch README语句      //必须在要和远程仓库匹配的仓库内运行Git Bash
+
+5.输入git init后，再输入touch README，然后就按着提示，复制粘贴上述语句代码即可
+
+6.输入完最后一段语句后，如果成功会提示输入Username和Password，填写GitHub的用户名和密码，注意password在输入时是看不见的，所以不要怀疑电脑有问题，输入后回车即可
+
+7.关联完成后，刷新一下GitHub，你会发现刚刚创建的远程库变成看项目的形式，此时就可以把本地库的所有内容推送到远程库上
+
+五、将本地库的修改提交到远程库（例如添加一个文件）
+
+1.在仓库内放一个文件
+
+2.在本地仓库内打开Git Bash
+
+3.然后依次输入
+
+git init
+
+git remote add origin  xxxx.git //xxx.git（就是你在远程github上创建资源http地址）
+
+git add --all //添加
+
+git commit -m "更改的内容说明，比如：添加了text文件说明"    //本地库修改
+
+git push origin master //提交到远程库
+
+4.中间遇到的某些提示不用管，最后一句输入后如果出现填写用户名和密码就说明操作没问题
+
+5.输入完用户名和密码，等进度条都是100%后就上传成功，刷新一下远程仓库，就可以看到上传的内容
+
+ 
+
+ 
+
+六、从远程库克隆创建本地库（只能克隆自己的远程库或者被拉入的项目的远程库，来创建本地库）
+
+1.先有本地库，后有远程库,这样你可能觉得烦，那么远程库克隆就可以直接在本地创建本地库
+
+2.假设我们从零开发，那么最好的方式是先创建远程库，然后，从远程库克隆。
+
+3.登陆GitHub，创建一个新的仓库，创建时一定要勾选Initialize this repository with a README
+
+4.打开你希望克隆在本地机器的哪个盘，如果直接运行Git Bash，将默认为C盘，比如我想克隆到G盘，我就打开G盘后运行Git Bash
+
+5.输入$ git clone https://github.com/r43ssu/java.git(https://。。。。。。这是你创建的远程库的地址，创建后GitHub上会显示)
+
+6.克隆完成，本地就产生一个本地库，且库名和远程库库名相同
+
+ 
+
+ 
+
+七、把别人的远程库的代码克隆到本地库中（不能通过远程库克隆创建本地库）
+
+1.提前创建好本地库（详细见二中的说明）
+
+2.找到你要克隆的项目，点击项目右上角的Fork，然后再复制Fork后的项目链接
+
+2.在本地库中打开Git Bash
+
+3.$ git clone https://github.com/5132u/bootstrap.git（5132u这个位置应该显示的是你的用户名，一定要从自己的账号下clone仓库，这样你才能推送修改。如果从作者的仓库地址git@github.com:twbs/bootstrap.git克隆，因为没有权限，你将不能推送修改。）
+
+ 
+
+ 
+
+八、Git中常用的语句
+
+1.$ git  status     //git status命令可以让我们时刻掌握仓库当前的状态
+
+2.$ git  diff  文件名   //查看文件是如何修改的，例如：$ git  diff  readme.txt
+
+3.$git  log //显示最近的修改到最远的修改
+
+4.$git  reset --hard HEAD^  //回退到上一个版本，HEAD表示当前，HEAD^表示上一个，HEAD^^表示上上个，如果回退太多，就用HEAD~n，n指回退多少
+
+5.$ git reflog     //用来记录你的每一次命令
+
+ 
+
+6.git branch             //查看分支：
+
+7.git branch <name>      //创建分支：
+
+8.git checkout <name>    //切换分支：
+
+9.git checkout -b <name>  //创建+切换分支：
+
+10.git merge <name>      //合并某分支到当前分支：
+
+11.git branch -d <name>    //删除分支：
+
+ 
+
+12.git stash              //把当前工作现场“储藏”起来，等以后恢复现场后继续工作
+
+13.git stash list          //查看刚才用git stash储藏的工作现场工作现场发现工作分支还在
+
+Git把stash内容存在某个地方了，但是需要恢复一下，有两个办法： 一是用git stash apply恢复，但是恢复后，stash内容并不删除，你需 要用git stash drop来删除；
+
+另一种方式是用git stash pop，恢复的同时把stash内容也删了：
+
+你可以多次stash，恢复的时候，先用git stash list查看，然后恢复指 定的stash，用命令：$ git stash apply stash@{0}  
+
+ 
+
+推送分支
+
+推送分支，就是把该分支上的所有本地提交推送到远程库。推送时，要指定本地分支，这样，Git就会把该分支推送到远程库对应的远程分支上：
+
+$ git push origin master
+
+如果要推送其他分支，比如dev，就改成：
+
+$ git push origin dev
+
+但是，并不是一定要把本地分支往远程推送，那么，哪些分支需要推送，哪些不需要呢？
+
+master分支是主分支，因此要时刻与远程同步；dev分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；
+
+ 
+
+抓取分支
+
+多人协作时，大家都会往master和dev分支上推送各自的修改。
+
+因此，多人协作的工作模式通常是这样：
+
+首先，可以试图用git push origin branch-name推送自己的修改；
+
+如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；
+
+如果合并有冲突，则解决冲突，并在本地提交:先用git pull把最新的提交从origin/dev抓下来,
+
+如果git pull也失败了，原因是没有指定本地dev分支与远程origin/dev分支的链接，根据提示，设置dev和origin/dev的链接：$ git branch --set-upstream dev origin/dev，然后再pull
+
+没有冲突或者解决掉冲突后，再用git push origin branch-name推送就能成功！
+
+如果git pull提示“no tracking information”，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream branch-name origin/branch-name。

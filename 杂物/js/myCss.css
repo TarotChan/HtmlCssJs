@@ -1,0 +1,18 @@
+div.main>ul>li{
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+}
+div.main>ul>li>ul{
+	position: absolute;
+	visibility: hidden;
+}
+div.main>ul>li>ul>li{
+	width: 700px;
+	list-style: none;
+	margin-left: -40px;
+	background-color: #FCC;
+}
+div.main>ul>li:hover>ul{
+	visibility: visible;
+}
